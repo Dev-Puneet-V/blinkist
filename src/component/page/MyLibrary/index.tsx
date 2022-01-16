@@ -10,7 +10,17 @@ const MyLibrary = () =>{
         currentlyReading : [],
         finishedBook: []
     });
-    const [currState, setCurrState] = useState("reading");
+    const tabData = [
+        { 
+          'value': 'reading',
+          'label': 'Currently reading',
+        },
+        { 
+          'value': 'finished',
+          'label': 'Finished',
+        }
+    ]
+    const [currState, setCurrState] = useState(tabData[0].value);
     useEffect(() => {
         const processor = async () => {
             let response = await fetch('/demo_data/index.json');
@@ -36,7 +46,7 @@ const MyLibrary = () =>{
                         imgHeight= {300}
                         url= {currData.url}
                         bookName= {currData.name}
-                        writerName= {currData.writer}
+                        writerName= {currData.writerName}
                         timeRead= {currData.timeRead}
                         width= {350}
                         inLibrary= {true}
@@ -50,7 +60,7 @@ const MyLibrary = () =>{
                         imgHeight= {300}
                         url= {currData.url}
                         bookName= {currData.name}
-                        writerName= {currData.writer}
+                        writerName= {currData.writerName}
                         timeRead= {currData.timeRead}
                         width= {350}
                         inLibrary= {true}
@@ -61,13 +71,17 @@ const MyLibrary = () =>{
             }
         }
     }
+
+
+    
+
     return (
         <Container>
             <Typography   variant="h5" theme={baseTheme}>
                 My Library
             </Typography>
-            <Tab stateHandler={handleState}/>
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', flexWrap: 'wrap', overflowY: 'scroll'}}>
+            <Tab stateHandler={handleState} tabData={tabData}/>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap'}}>
                 { 
                     cards()
                 }

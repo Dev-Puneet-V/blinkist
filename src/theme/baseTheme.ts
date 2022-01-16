@@ -14,7 +14,10 @@ const buttonTheme = createTheme({
       }
     },
     typography: {
-      'fontFamily': 'Cera Pro',
+      fontFamily: 'Cera Pro',
+      h1:{
+        fontWeight: 'bold'
+      },
       h5: {
         fontWeight: 'bold',
         fontSize: '33px'

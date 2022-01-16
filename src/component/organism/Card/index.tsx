@@ -5,10 +5,13 @@ import Typography from '../../atom/Typography';
 import ProgressBar from '../../atom/ProgressBar';
 import Icon from '../../atom/Icon';
 import AddIcon from '@mui/icons-material/Add';
+import {NavLink} from 'react-router-dom';
 const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minute read", progress, width, inLibrary }: any) => {
     return(
         <Paper elevation={1} sx={{borderRadius: '10px', width: `${width}px`, margin: "10px"}}>
-            <Image sx={{borderRadius: '10px 10px 0px 0px'}} height={imgHeight} width={width} alt="blinkist" component="img"  src={url}/>
+            <NavLink to='/book-info'>
+                <Image sx={{borderRadius: '10px 10px 0px 0px'}} height={imgHeight} width={width} alt="blinkist" component="img"  src={url}/>
+            </NavLink>
             <Box sx={{padding: '5px'}}>
                 <Typography variant="h5" sx={{fontWeight: 'bold'}}>
                     {bookName}

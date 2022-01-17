@@ -26,7 +26,7 @@ const App = () => {
                 <Route path="/" element={<MyLibrary />} />
                 {/* <Route path="projects" element={<Projects />} >
                     <Route path=":projectId" element={<ProjectInfo />} />
-                </Route> */}
+                // </Route> */}
                 <Route path="search" element={ <Search />} />
                 <Route path="book-info" element={<BookInfo />} />
                 <Route

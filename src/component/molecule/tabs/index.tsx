@@ -18,13 +18,13 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
         value={value}
         onChange={handleChange}
         aria-label="wrapped label tabs example"
-        textColor="primary"
-        indicatorColor='primary'
+        textColor={props.textColor ? props.textColor : "secondary"}
+        indicatorColor={props.indicatorColor ? props.indicatorColor : "secondary"}
       >
         {
           tabData.map((currTab:any) => {
             return (
-              <Tab value={currTab.value} label={currTab.label} />
+              <Tab value={currTab.value} label={currTab.label} sx={{fontWeight: 'bold'}}/>
             );
           })
         }

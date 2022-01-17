@@ -1,7 +1,5 @@
 import Image from '.';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-// import BookImage from '../../../assets/book.png';
-
 const ImageComponent = {
     title : 'atom/Image',
     component: Image

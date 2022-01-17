@@ -1,6 +1,5 @@
 import Card from '.';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import image from '../../../assets/book.png';
 
 const CardComponent = {
     title : 'organism/Card',
@@ -19,7 +18,7 @@ export const Library = Template.bind({});
 
 Library.args = {
     imgHeight: 300,
-    url: image,
+    url: '/assets/book.png',
     bookName: "Being Boss",
     writerName: "Kathleen Shannon and Emily...",
     timeRead: "13-minute read",
@@ -33,7 +32,7 @@ export const NotInLibrary = Template.bind({})
 
 NotInLibrary.args = {
     imgHeight: 300,
-    url: image,
+    url: '/assets/book.png',
     bookName: "Being Boss",
     writerName: "Kathleen Shannon and Emily...",
     timeRead: "13-minute read",

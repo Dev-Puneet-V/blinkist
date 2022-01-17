@@ -86,9 +86,9 @@ const BookInfoComponent = (props:any)=>{
                     <Image height='300' width='280' src= '/assets/book.png'/>
                 </Box>
             </Box>
-            <Box sx={{borderBottom: '1px solid lightGrey', padding: '20px 0px'}}>
+            <Box sx={{marginBottom: '260px', borderBottom: '1px solid lightGrey', padding: '20px 0px'}}>
                 <Tab stateHandler={handleState} tabData={tabData}/>
-                <Box>
+                <Box sx={{height: '100px'}}>
                     {moreInfo()}
                 </Box>
             </Box>

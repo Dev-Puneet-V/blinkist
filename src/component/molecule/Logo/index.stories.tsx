@@ -1,6 +1,5 @@
 import Logo from '.';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import LogoImage from '../../../assets/logo.png';
 
 const LogoComponent = {
     title : 'molecule/Logo',
@@ -11,7 +10,7 @@ export const Template: ComponentStory<typeof Logo>  = (args:any) => <Logo {...ar
 
 Template.args = {
     height: 30,
-    url: LogoImage,
+    url: '/assets/logo.png',
     name: 'Blinkist'
 }
 

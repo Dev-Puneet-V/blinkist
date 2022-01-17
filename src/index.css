@@ -6,3 +6,8 @@ body {
 
 code {
 }
+
+
+::-webkit-scrollbar { 
+  display: none; 
+  }

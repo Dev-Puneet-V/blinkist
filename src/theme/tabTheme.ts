@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material/styles';
+import { fontWeight } from '@mui/system';
 
 const tabsTheme = createTheme({
     palette: {
-      primary: { 
-        main: '#2CE080',
-        // contrastText: '#11cb5f',
+      secondary: { 
+        main: '#2CE080'
       }
     }
 });

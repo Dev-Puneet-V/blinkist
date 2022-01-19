@@ -2,112 +2,44 @@ import {Container, Box} from '@mui/material'
 import Banner from '../../molecule/Banner';
 import Input from '../../atom/Input';
 import {Search} from '@mui/icons-material';
-import {useState, useEffect} from 'react';
 import Card from '../../organism/Card';
 import Typography from '../../atom/Typography';
-const SearchComponent = (props:any)=>{
-    // const [data, setData] = useState([]);
-    const data = [
-        {
-            'heading': 'Trending blinks',
-            'books': [
-                {
-                    "id": 0,
-                    "name": "Being Boss",
-                    "url": "assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 1,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 3,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 4,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 9,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 7,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-            ]
-        },
-        {
-            'heading': 'Just added',
-            'books': [
-                {
-                    "id": 0,
-                    "name": "Being Boss",
-                    "url": "assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 1,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-                {
-                    "id": 3,
-                    "name": "Being Boss",
-                    "url": "/assets/book.png",
-                    "timeRead": "13-minute read",
-                    "writerName": "Jim Collins & Bill Lazier"
-                },
-            ]
-        },
-        {
-            'heading': 'Featured audio blinks',
-            'books': [
-            {
-                "id": 4,
-                "name": "Being Boss",
-                "url": "/assets/book.png",
-                "timeRead": "13-minute read",
-                "writerName": "Jim Collins & Bill Lazier"
-            },
-            {
-                "id": 9,
-                "name": "Being Boss",
-                "url": "/assets/book.png",
-                "timeRead": "13-minute read",
-                "writerName": "Jim Collins & Bill Lazier"
-            },
-            {
-                "id": 7,
-                "name": "Being Boss",
-                "url": "/assets/book.png",
-                "timeRead": "13-minute read",
-                "writerName": "Jim Collins & Bill Lazier"
-            },
-            ]
-        },
-    ]
+import CircularProgress from '@mui/material/CircularProgress';
+const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, ...props}:any)=>{
+    const checkInLibrary = (bookId:any)=>{
+        let checker = (curr:any) => {
+            for(let currData of curr){
+                if(currData.id === bookId){
+                    return {status: true, progress : currData.progress};
+                }
+            }
+            return {status: false};
+        }
+        return checker(library.currentlyReading) || checker(library.finishedBook);
+    }
+
+    const libraryHandler = async (bookId:any, setBookStatus:any) => {
+        try {
+            library.currentlyReading.push({
+                "id" : bookId,
+                "progress" : 0
+            });
+            setLibrary(library);
+            setBookStatus(true);
+            let res = await  fetch("http://localhost:3004/library/", {
+              method: "PUT",
+              body: JSON.stringify(library),
+              headers: {
+                "Content-Type": "application/json"
+              }
+            });
+            return await res.json();
+          } catch (err) {
+                setBookStatus(false);
+                setLibrary(library.currentlyReading.filter((currData:any) => currData.id !== bookId));
+                return err;
+          }
+    }
     return (
         <Container>
             <Banner
@@ -130,21 +62,27 @@ const SearchComponent = (props:any)=>{
                         <Typography sx={{fontWeight: 'bold', fontSize: '25px', marginTop: '75px'}}>
                             {curr.heading}
                         </Typography>
-                        <Box sx={{display: 'flex', flexWrap: 'wrap'}}>
-                            {
-                                curr.books.map((currData:any) => {
-                                    return <Card 
-                                        key={currData.id}
-                                        imgHeight= {300}
-                                        url= {currData.url}
-                                        bookName= {currData.name}
-                                        writerName= {currData.writerName}
-                                        timeRead= {currData.timeRead}
-                                        width= {350}
-                                        inLibrary= {false}
-                                        progress= {currData.progress}
-                                    />
-                                })
+                        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center'}}>
+                            {  
+                                !library ?
+                                 <CircularProgress /> :
+                                    curr.books.map((currData:any) => {
+                                        currData = books[currData.id];
+                                        const inLibrary = checkInLibrary(currData.id)
+                                        return <Card 
+                                            cardId={currData.id}
+                                            key={currData.id}
+                                            imgHeight= {300}
+                                            url= {currData.url}
+                                            bookName= {currData.name}
+                                            writerName= {currData.writerName}
+                                            timeRead= {currData.timeRead}
+                                            width= {350}
+                                            inLibrary= {inLibrary.status}
+                                            progress={inLibrary.progress}
+                                            libraryHandler={libraryHandler}
+                                        />
+                                    })
                             }
                         </Box>
                     </Box>

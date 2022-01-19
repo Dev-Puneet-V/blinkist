@@ -25,7 +25,6 @@ const ExploreComponent = ()=>{
             <Box sx={{backgroundColor: '#F1F6F4', height: '398px', width: '100%'}}>
                 <Container>
                     <Tab  textColor='primary' indicatorColor='primary' stateHandler={handleState} tabData={tabData}/>
-                    
                 </Container>
             </Box>
         </Box>

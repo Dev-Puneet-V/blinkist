@@ -7,6 +7,7 @@ const App = () => {
       <CssBaseline />
       <Template />
     </ThemeProvider>
+    // testing sonarcloud 
   );
 }
 

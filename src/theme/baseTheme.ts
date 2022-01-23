@@ -7,7 +7,7 @@ const buttonTheme = createTheme({
       },
       primary: { 
         main: '#ffffff',
-        contrastText: '#11cb5f',
+        contrastText: '#11cb5f'
       },
       background: {
         default: "#394764"

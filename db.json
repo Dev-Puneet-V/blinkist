@@ -1,0 +1,222 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "name": "Bring Your Human to Work",
+      "url": "https://s3-alpha-sig.figma.com/img/7a8d/2547/2a61cffee838cf588c90ce1fcfaedae7?Expires=1643587200&Signature=ekBIi7OlQPO21GI~8fPDOuOQ4nlCLyPuEP43UqRCQWyy6xtlmyoBlWm8mFVqvI~nXLT-zqA7mD~HHYsjrKefAJwQXn0C8KZmkePdKiCIIU3R~uprBblEYnzMf9X4lqtwkeQ-StYxP7evEzqJVoF0ZiYbWsrCuU-r2Hh-BuBswc9CKNSXsr240OGQUTNCBkpXLalMv1G5B8uMcGigrQZG3wNsyLn3Lhc7jAgkefLSuLIONUtnaPkNvQ6DFsoSTv5sPChSDGMi1GApj6LUBbp3Jy66ps6TMDAGXXQmIjRkbPqzlVBZxgrnnZ0EBwu8iVeznR56CdqArTLCbgCDnMop3A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Erica Keswin",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 1,
+      "name": "Employee to Entrepreneur",
+      "url": "https://s3-alpha-sig.figma.com/img/3e9a/001d/986c218c11bd0e5acb50c36d5e3ce117?Expires=1643587200&Signature=DZYXpi0CbG~AurLXDHgZx-BbBKyP3YrmSkmLA7YKmLdAre8mHszQEGeDHHz4QDu~TQAyMQWRkaBdLiMYUFh50Rondd9VJE7v2cUZz-KK5incuWPrf~EbnrUMpg3s-Zw9ExrlArD983vdSUDn8l7tkCfbkwj-ntXf0Gw24Y-eKzTWWqMIgcbMTH8A-XkSDDOuF7LMPO6VMkYsaL7GMWUna~EhJWYJyaQfrVIGYldzQ6Dbek5eZna99iYcPuJpxs8TSY4R0x49t5yd-cBCmgYIE6mtjvC6zhhCN7MgchVF4vtkgF2eYextqdQU74-jHWbJgligei9fyLj-wPRgcqC31A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "15-minute read",
+      "writerName": "Steve Glaveski",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 2,
+      "name": "Doesn’t Hurt to Ask",
+      "url": "https://s3-alpha-sig.figma.com/img/076f/7bd2/672e13400982c462d295d772e14f20a8?Expires=1643587200&Signature=hmJH9xVx3qiCJWjmmVE-X3~RDXtSH6j0~JbysB~-hJOe4twRfrWj27R2PWRiY-2gu-GqaYfM45ku9faYb9pkTIu62Lgfay4bcb31bemSY-J3tEZEeV7sH5oRYaiDwesW5NjAhSn7OMC5Zdvgzt3BleIQb~Hn3MjtQadcysj6IrWpfuM7RS8zgWJdS4kw6O4fybrH1kKcnZPgg42WxaZtVzuIR~mdaljCez-pnITgFDgHZzQ-lyAsg6zI0XTmxXBs45cpZBf8Qz~w1zp-1CFKOqkjgr1CZO~rSQ5mzKITOpkDPblAb~gubWReLli-DZjIE51T-qDCBcxrsOFxrjFFEw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Trey Gowdy",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 3,
+      "name": "The Fate of Food",
+      "url": "https://s3-alpha-sig.figma.com/img/a029/7cf3/8283a77df75b8b9996b5539a7e94c40c?Expires=1643587200&Signature=HbWJybW80S~p7r8WG6J502WrHEPov~IasZDG2PCNgUTZdz3NKFqaS6NTbVQC3uvKYl64ctngQqzKPYdbodfJ5dv0o8mKjRq58cLeVnIYIZG~CEV3YfO8qX9Ct7XJ5j~ACITW-D3J6dNEnxeGG5~TfqZl0ICJzewtJg8K7a0qRAWVTAC~SmOJlzGUyMwa0GeHOeC-ljAvLUeHMVF4QzJ-spbFiJE~-wenpwYXQOeamgFPRCvtbWsjqJ3EuX5wt8vZH5RgpKHPl8p286Q7Khj4dbSsllgflZrgJ1knCT~wTJwfqL3hdiC7YS7KAoy9PsgAgLVwaiGmWlhQVK5n5YzQVQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Amanda Little",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 4,
+      "name": "Lives of the Stoics",
+      "url": "https://s3-alpha-sig.figma.com/img/6c72/6047/7882428f1a8f3edfd789a93af55c0906?Expires=1643587200&Signature=FQTzSzm1yt358SriWgXPrhL0iFFnzM2j1dn3SJNH608RukMVuLQxWtWvnaXQ7qqIjVlswrDt1uVB~hxbOz5yUKyyiLrPcA5IN7yGOfMcaegrvkZFw139q3CcmY1fNl64ZTZKISoC-ApQ3rdAmOsVuBCoYtbinrrLdtOk~b7xsrvd5~ljCtrFOVF0wjjbw2YbnFZ5KOkLRsXK~nkEOG0Y5nnwCZUY4TZKjJueE~ykHLIW7J98xLELatmKk7~3mEhNgQg~bYo-dNd4VxXKrXYwgiDjgLdHOUlY962isPd2DUEb5WkyC5zvvAuVZa6D0lvqK557cYqrfY-SX1qQazsRzg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Ryan Holiday, Stephen Hansel",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 5,
+      "name": "Loving Your Business",
+      "url": "https://s3-alpha-sig.figma.com/img/f789/7b02/2da4a7f458cc476fb504b5ec892de6bf?Expires=1643587200&Signature=ZipA-4R5-p1B0cYlUvRIKYR~hR9d1P7wZPSuLlG-laxyjQSB4otyhGwZpc7eoidBPJH6KmdED4WlN~xcuLU53Z6veH8BURSLkRmDQxRwKwm4WlbdHRMakaEt2wn1GPQSx2hMfkXuUTPdCAXlcIUHZ3A4LvSIuZ5lAY-3LnYae34bbh7x48yn8IFPKquV1zuW80wASE0htQcN5f2EWgVgv3A5pOKjlgChXWYWBz-btkx8JZp1pRRUEen1Mt0WRiGk9U~mCK~nV-WOK-ZW16bRdygWM3Bdps8Q8ZrJ2x6g1NbY3wFmCDDkIUE~EQaL0aR7BJ1tweYDn3g9a~NC6hPYKg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Debbie King",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 6,
+      "name": "The Fate of Food",
+      "url": "https://s3-alpha-sig.figma.com/img/79e2/7cec/04adb2cb7e21de32e3cb65a829e1011d?Expires=1643587200&Signature=JhjNOMpx4m2bGYLarHmlC6RVNla6zr5hG2Eryw7zKAAFZvlkYo9zNJqAPW6BZ5ienVdqdg2lxqnU7jGNNn55Werc~nhRkljHZcBXGB75SmF2DudFn2J~70N41JVg1rWi1HfiJcI6UpHggmSboSLMNe5ydh9B5LwWVCnUhtEn0mRFm5MnKs19pH4ILBNIURhDVxeJcysA1D6JYs~dFm1oHqPbXmyizNrUGmTPFA1X1x-sGihmsnd9jd~dYWOI69SzKmPL4zvk3qLTxAHg4xdSAoqqo8cUUj~lxem-gXB0H5wi4AmiaTqrxzSBLg57dVNzGTG51RMyGGAdxvuRVsAfUQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "15-minute read",
+      "writerName": "Noreena Hertz",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 7,
+      "name": "Eat Better, Feel Better",
+      "url": "https://s3-alpha-sig.figma.com/img/a8fa/012a/eea7424ebbc307ee55ae23ab1b355ce2?Expires=1643587200&Signature=aCoJ87Qqa4D22O6veHznul19rMfClmONW0mmP49I7Tx4WZ~IIbKOI~Np5Ej1InULDD0vVKEFKZQF2zLFSsTzRp-O8InSy3MfYn9mbnQO14SwhPIOsyQCrKZUUghW6kUEmI6FbGdFsVG-IhBd20nIzXoRJ5w3KZmNhGN4kL2NcTlKKRLKZQiz1425cD09odIqeBfWKC5WnGDBbL2EfoBc0roBaWS20YbjUUqLtqR43vKbxnodC3qu6Jg7ovTA6APLkGjgi8~OqPn2Tb5sIM41TOUcTZO0LwY7OmOsBEOyLZH04MsJLtG5ffQidIO2Me3P-hcT5rmhOCSnAJqgeBOvFQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Giada De Laurentiis",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 8,
+      "name": "Dropshipping",
+      "url": "https://s3-alpha-sig.figma.com/img/643d/d789/e66ced625e5439bacbcbe2128c0f2303?Expires=1643587200&Signature=ZNns2O3J44Grw6vj4KWKKIiKjFWPFCUeywg4UsZNUVZbZGO5GFZTCNpP5~hvk7vQjZcIgiNllqlCK7OJy8zx6JVD5k61pGYKjMWWJeNLW8nknkQHLLq8MSkEdsdosnPv-yjaS5n7P9hKnRao9Lxrvg4hGQol0Jg~Mda659adhnBSk6KrHJp3xU1uAyTwaRkaK6Ufy3jB0r2Z57bByL6isMfRtODZZSc4ItqZ8DMcaaPh2FbiATstWuNPq9N-WiizJ1moQLfamQOpKb-iq4VydgunVsvZ~Dsh6iRY7BiyUvz9RyFbDAA9PUFc7-dSrYdCgeqb82R8IqpZrwCAjj3WfQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "15-minute read",
+      "writerName": "James Moore",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 9,
+      "name": "Being Boss",
+      "url": "https://s3-alpha-sig.figma.com/img/d6ff/11bb/88b0e65d07ed5e88976fd6ef79c2890d?Expires=1643587200&Signature=BoUWxYui6ZV0fIjTDw1YEfMLmrL-Ll5loq08p9DNVyC8TR7IoS8hTaZdId2qpmgtvVpsb36~sU33JaWVKhmNV4CsrxTy2-MRtEO~wjV4lBzsE353fGMM8lYjsub2dR0YPp6EKBDnkhCl6a6Zka~btq~7nplZh9P7SqmP4s~KjNyHftRC~tOsfQiTLHHJck2r1i03QZMmc4STpabkgy4ubt29YHQ5x2J1ik6knr5djNwXqc6GgjPw6ynXWpVUX5~uz-1GqwvC98n2adilikhEW3gbpcBeArILY~V~zjbdTivTegMC8GX28aMZp1z7QvF3P~aMikDoFWLg6SJ7zrK2mg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "15-minute read",
+      "writerName": "Kathleen Shannon and Emily...",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 10,
+      "name": "Beyond Entrepreneurship",
+      "url": "https://s3-alpha-sig.figma.com/img/9ef8/4879/159f1a8fdf9dafb9b0fd0b3a69170efb?Expires=1643587200&Signature=eTAkUfgVUgo53N3nFnCOYz6Zt5lW-1koFH4gcYDI~f6yBVyc1R5AKw~AFoVBSIXW3DR7119UHPltjMz6w4S9sB0tNhB6gJtenTp-63eGG2EAb-VaoR-398sc4xSle7qZ59XD-4kVnzvDddUbA01~KTb7FLy42DdmQhEfbOb1GVpyZct8FWaTx9rhZ8NlIg-pGx5~JAgPgPX1IfZwrC1Uei06BeN6CmhNrLrgAPPir6liEdjSoHcEE99ksrzXl76pEL9LtQZEkOOjz7~8OE1YqC74QavqpPYCSViyj2TBzn-ZeRaBEAbTBfFNTN~giqnLS7ZNeab~dUvgmwJW84q5sg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "13-minute read",
+      "writerName": "Jim Collins & Bill Lazier",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    },
+    {
+      "id": 11,
+      "name": "Employee to Entrepreneur",
+      "url": "https://s3-alpha-sig.figma.com/img/3e9a/001d/986c218c11bd0e5acb50c36d5e3ce117?Expires=1643587200&Signature=DZYXpi0CbG~AurLXDHgZx-BbBKyP3YrmSkmLA7YKmLdAre8mHszQEGeDHHz4QDu~TQAyMQWRkaBdLiMYUFh50Rondd9VJE7v2cUZz-KK5incuWPrf~EbnrUMpg3s-Zw9ExrlArD983vdSUDn8l7tkCfbkwj-ntXf0Gw24Y-eKzTWWqMIgcbMTH8A-XkSDDOuF7LMPO6VMkYsaL7GMWUna~EhJWYJyaQfrVIGYldzQ6Dbek5eZna99iYcPuJpxs8TSY4R0x49t5yd-cBCmgYIE6mtjvC6zhhCN7MgchVF4vtkgF2eYextqdQU74-jHWbJgligei9fyLj-wPRgcqC31A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "timeRead": "15-minute read",
+      "writerName": "Jim Collins & Bill Lazier",
+      "synopics": "Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+      "for": "One of the key learnings for entrepreneurs is the understanding of the reality about success and how extraordinary opportunities, instead of talent, pave the way to excellence.",
+      "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
+      "aim": "Turning Your Business into an Enduring Great Company"
+    }
+  ],
+  "library": {
+    "currentlyReading": [
+      {
+        "id": 11,
+        "progress": 65
+      },
+      {
+        "id": 4,
+        "progress": 90
+      },
+      {
+        "id": 3,
+        "progress": 0
+      }
+    ],
+    "finishedBook": [
+      {
+        "id": 9
+      },
+      {
+        "id": 6
+      },
+      {
+        "id": 10
+      },
+      {
+        "id": 8
+      },
+      {
+        "id": 1
+      }
+    ]
+  },
+  "extra": [
+    {
+      "heading": "Trending blinks",
+      "books": [
+        {
+          "id": 0
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        }
+      ]
+    },
+    {
+      "heading": "Just added",
+      "books": [
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        }
+      ]
+    },
+    {
+      "heading": "Featured audio blinks",
+      "books": [
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 11
+        }
+      ]
+    }
+  ]
+}

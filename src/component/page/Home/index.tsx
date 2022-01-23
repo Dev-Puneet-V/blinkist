@@ -5,7 +5,33 @@ import {Search} from '@mui/icons-material';
 import Card from '../../organism/Card';
 import Typography from '../../atom/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
+import { makeStyles } from '@mui/styles';
+import theme from '../../../theme/mainTheme'
+
+const useStyles = makeStyles({
+    input: {
+        margin: `${theme.spacing(5)} 0px`,
+        height: theme.spacing(6),
+        width: '100%',
+        maxWidth: '658px',
+        fontWeight: 'bold',
+        fontSize: '20px'
+    },
+    heading: {
+        fontWeight: 'bold',
+        fontSize: theme.spacing(4), 
+        marginTop: '75px'
+    },
+    main: {
+        display: 'flex', 
+        flexWrap: 'wrap', 
+        alignItems: 'center'
+    }
+});
+
+
 const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, ...props}:any)=>{
+    const classes = useStyles();
     const checkInLibrary = (bookId:any)=>{
         let checker = (curr:any) => {
             for(let currData of curr){
@@ -15,7 +41,8 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
             }
             return {status: false};
         }
-        return checker(library.currentlyReading) || checker(library.finishedBook);
+        let inCurrRead = checker(library.currentlyReading)
+        return inCurrRead.status ? inCurrRead : checker(library.finishedBook);
     }
 
     const libraryHandler = async (bookId:any, setBookStatus:any) => {
@@ -47,22 +74,15 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
                 discription='Everything you need to know about thriving on a shoestring budget, making your first million, and hiring right from the start.'
                 img='/assets/banner.png'
             />
-            <Input sx={{
-                   margin: '30px 0px',
-                   height: '46px',
-                   width: '100%',
-                   maxWidth: '658px',
-                   fontWeight: 'bold',
-                   fontSize: '20px'
-                }} icon={<Search />} placeholder="Search by title or author" />
+            <Input className={classes.input} startIcon={<Search />} placeholder="Search by title or author" />
             <Box>
                 {
                 data.map((curr:any)=>{
                     return <Box>
-                        <Typography sx={{fontWeight: 'bold', fontSize: '25px', marginTop: '75px'}}>
+                        <Typography className={classes.heading}>
                             {curr.heading}
                         </Typography>
-                        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center'}}>
+                        <Box className={classes.main}>
                             {  
                                 !library ?
                                  <CircularProgress /> :

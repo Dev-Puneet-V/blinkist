@@ -7,8 +7,51 @@ import Icon from '../../atom/Icon';
 import AddIcon from '@mui/icons-material/Add';
 import {NavLink, Link} from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
+import theme from '../../../theme/mainTheme'
 import {useState} from 'react';
-  
+
+const styles={
+    parent: {
+        borderRadius: theme.spacing(1),
+        margin: `${theme.spacing(3)} ${theme.spacing(3)} ${theme.spacing(3)}`,
+    },
+    image: {
+        borderRadius: `${theme.spacing(1)} ${theme.spacing(1)} 0 0`
+    },
+    content: {
+        padding: theme.spacing(2)
+    },
+    rightIcon:{
+        fontSize: theme.spacing(5)
+    },
+    timeIcon: {
+        fontSize: theme.spacing(4),
+        color: theme.palette.textcolor.light,
+        marginTop: theme.spacing(0)
+    },
+    progress:{
+        borderRadius: `0 0 ${theme.spacing(1)} ${theme.spacing(1)}`
+    },
+    flex: {
+        display: 'flex',
+        alignItems: 'center'
+    },
+    bookName: {
+        fontWeight: 'bold',
+        fontSize: '18px'
+    },
+    libraryButton: { 
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: theme.spacing(6),
+        borderTop: '1px solid lightGrey', 
+        borderRadius: `0 0 ${theme.spacing(1)} ${theme.spacing(1)}`,
+        width: '100%',
+    }
+
+}
+
 const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minute read", progress, width, inLibrary, libraryHandler, ...props}: any) => {
     const [hoverState, setHoverState] = useState(false);
     const [bookLibraryStatus, setBookLibraryStatus] = useState(inLibrary);
@@ -16,28 +59,25 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minu
         setHoverState(!hoverState)
     }
     return(
-        <Paper elevation={1} sx={{borderRadius: '10px', width: `${width}px`, margin: "10px", position: 'relative'}} onMouseEnter={hoverStateHandler} onMouseLeave={hoverStateHandler}>
+        <Paper elevation={1} sx={{
+                width: `${width}px`,
+                backgroundColor: `${!inLibrary && hoverState ? theme.palette.primary.light : 'white'}`
+            }}
+            onMouseEnter={hoverStateHandler} onMouseLeave={hoverStateHandler} style={styles.parent}>
             <Link to={`/book-info/${props.cardId}`}>
-                <Image sx={{borderRadius: '10px 10px 0px 0px'}} height={imgHeight} width={width} alt="blinkist" component="img"  src={url}/>
+                <Image  height={imgHeight} width={width} alt="blinkist" component="img"  src={url} style={styles.image}/>
             </Link>
             <Box sx={{
-                padding: '5px',
-                backgroundColor: `${!inLibrary && hoverState ? '#F1F6F4' : 'white'}`
+                    backgroundColor: `${!inLibrary && hoverState ? theme.palette.primary.light : 'white'}`
                 }} 
+                style={styles.content}
             >
-                <Typography variant="h6" sx={{fontWeight: 'bold'}}>
-                    {bookName}
-                </Typography>
-                <Typography variant="h6" sx={{fontWeight: '800', color: 'gray'}}>
-                    {writerName}
-                </Typography>
-                <Box 
-                    sx={{display: 'flex',
-                    alignItems: 'center'
-                    }}
-                >
-                    <Icon sx={{padding: '6px'}} icon={<AccessAlarm />} />
-                    <Typography sx={{color: "gray", fontSize: "16px" }} variant="body">
+                <Typography variant="subtitle1" style={styles.bookName} >{bookName}</Typography>
+                <Typography variant="body1" color={theme.palette.textcolor.light}>{writerName}</Typography>
+                <Box style={styles.flex}>
+                    <Icon icon={<AccessAlarm style={styles.timeIcon}/>} />
+                    <Typography variant="caption2" 
+                    color={theme.palette.textcolor.light}>
                         {timeRead}
                     </Typography>
                 </Box>
@@ -46,29 +86,22 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minu
                         justifyContent: 'end'
                     }}
                 >
-                {bookLibraryStatus ? <Icon  icon={<MoreHoriz sx={{padding: '6px'}}/>} /> : ''}
+                {bookLibraryStatus ? <Icon  icon={<MoreHoriz sx={{padding: theme.spacing(0)} } style={styles.rightIcon}/>} /> : ''}
                 </Box>
             </Box>
             <Box sx={{ position: 'relative'}}>
                 {bookLibraryStatus ? 
-                    <ProgressBar sx={{borderRadius: '0px 0px 10px 10px'}} width={100} value={progress} color="success"/> 
+                    <ProgressBar width={100} value={progress} color='primary'/> 
                     :
                     <Box onClick={e => 
                         libraryHandler(props.cardId, setBookLibraryStatus)
                     } 
                     sx={{
-                        display: 'flex', 
-                        justifyContent: 'center', 
-                        alignItems: 'center', 
                         color: `${!hoverState ? '#0365F2' : 'white'}`,
-                        backgroundColor: `${hoverState ? '#0365F2' : 'white'}`,
-                        height: '60px',
-                        borderTop: '1px solid lightGrey', 
-                        borderRadius: '0px 0px 10px 10px',
-                        width: '100%'
-                    }}>
-                        <Icon variant="h4" icon={<AddIcon sx={{fontWeight: 'bold', fontSize: '35px'}}/>} />
-                        <Typography  variant="h6" sx={{fontWeight: 'bold'}}>
+                        backgroundColor: `${hoverState ? '#0365F2' : 'white'}`
+                    }} style={styles.libraryButton}>
+                        <Icon variant="body1"  icon={<AddIcon />} />
+                        <Typography  variant="body1">
                             Add to library 
                         </Typography>
                     </Box>

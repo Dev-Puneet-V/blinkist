@@ -12,19 +12,20 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
     <ThemeProvider theme={tabTheme}>
       <Tabs
         value={value}
         onChange={handleChange}
         aria-label="wrapped label tabs example"
+        autoCapitalize="none"
         textColor={props.textColor ? props.textColor : "secondary"}
         indicatorColor={props.indicatorColor ? props.indicatorColor : "secondary"}
       >
         {
           tabData.map((currTab:any) => {
             return (
-              <Tab value={currTab.value} label={currTab.label} sx={{fontWeight: 'bold'}}/>
+              <Tab value={currTab.value} label={currTab.label}   sx={{fontWeight: 'bold', textTransform: 'unset'}}/>
             );
           })
         }

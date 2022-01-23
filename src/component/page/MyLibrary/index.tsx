@@ -5,9 +5,19 @@ import baseTheme from '../../../theme/baseTheme';
 import Tab from '../../molecule/tabs';
 import Card from '../../organism/Card';
 import CircularProgress from '@mui/material/CircularProgress';
+import theme from '../../../theme/mainTheme';
+import { makeStyles } from '@mui/styles';
+const useStyle = makeStyles({
+    cards: {
+        display: 'flex', 
+        alignItems: 'center', 
+        flexWrap: 'wrap'
+    }
+});
+
 const MyLibrary = ({books, setBooks, library, setLibrary}:any) =>{
+    const classes = useStyle();
     let data = library;
-    // console.log(library);
     let setData = setLibrary;
     const tabData = [
         { 
@@ -70,12 +80,12 @@ const MyLibrary = ({books, setBooks, library, setLibrary}:any) =>{
     
 
     return (
-        <Container>
-            <Typography   variant="h5" theme={baseTheme}>
+        <Container sx={{paddingTop: '50px'}}>
+            <Typography variant="h5" theme={baseTheme} mb={4}>
                 My Library
             </Typography>
             <Tab stateHandler={handleState} tabData={tabData}/>
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap'}}>
+            <Box className={classes.cards} mt={4}>
                 { 
                     cards()
                 }

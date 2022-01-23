@@ -8,7 +8,69 @@ import Tab from '../../molecule/tabs';
 import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import CircularProgress from '@mui/material/CircularProgress';
+import theme from '../../../theme/mainTheme'
+import {makeStyles} from '@mui/styles'
+const useStyle = makeStyles({
+    topHeading: {
+        margin: `${theme.spacing(3)} 0`
+    },
+    mainParent: {
+        display: 'flex',
+        justifyContent: 'space-between', 
+        marginBottom: theme.spacing(5)
+    },
+    parent: {
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between'
+    },
+    name: {
+        fontWeight: 'bold',
+        marginBottom: theme.spacing(4)
+    },
+    aim: {
+        marginBottom: theme.spacing(4)
+    },
+    writerName: {
+        color: 'gray', 
+        fontWeight: 'bold', 
+        marginBottom: theme.spacing(4)
+    },
+    timeInfo: {
+        display: 'flex',
+        alignItems: 'center'
+    },
+    alarmIcon: {
+        paddingRight: theme.spacing(0),
+        marginTop: theme.spacing(0)
+    },
+    time: {
+        color: theme.palette.textcolor.light, 
+        fontSize: theme.spacing(3) 
+    },
+    clickables: {
+        fontWeight: '700', 
+        display: 'flex',
+    },
+    statusBox: {
+        margin: `0 ${theme.spacing(4)} 0 0`        
+    },
+    status: {
+        margin: `0 ${theme.spacing(4)} 0 0`,
+    },
+    forward: {
+        color:'gray', 
+        margin: `0 ${theme.spacing(4)} 0 0` 
+    },
+    footer: {
+        marginBottom: '260px', 
+        borderBottom: '1px solid lightGrey', 
+        padding: `${theme.spacing(4)} 0px`
+    }
+});
+
 const BookInfoComponent = ({library, setLibrary}:any)=>{
+    const classes = useStyle();
     const { bookId } = useParams();
     const tabData = [
         { 
@@ -55,7 +117,7 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
             let index = library.currentlyReading.findIndex((curr:any) => curr.id == bookId);
             let currData = library.currentlyReading[index];
             library.currentlyReading.splice(index, 1);
-            library.finishedBook[index] = {"id" : currData.id};
+            library.finishedBook.push({"id" : currData.id});
             setLibrary(library);
             let res = await  fetch("http://localhost:3004/library/", {
                 method: "PUT",
@@ -91,55 +153,53 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
             )
         }
     }
-
     return(
         !bookData 
                 ?
         <CircularProgress />
             :
         <Container>
-            <Typography sx={{margin: '20px 0px'}}>
+            <Typography className={classes.topHeading}>
                 Get the key ideas from
             </Typography>
-            <Box sx={{display: 'flex',justifyContent: 'space-between', marginBottom: '40px'}}>
-                <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+            <Box className={classes.mainParent}>
+                <Box className={classes.parent}>
                     <Box>
-                        <Typography variant='h4' sx={{fontWeight: 'bold',marginBottom: '20px'}}>
+                        <Typography className={classes.name} variant='h4'>
                             {bookData.name}
                         </Typography>
-                        <Typography sx={{marginBottom: '20px'}}>
+                        <Typography className={classes.aim}  >
                             {bookData.aim}
                         </Typography>
-                        <Typography sx={{color: 'gray', fontWeight: 'bold', marginBottom: '20px'}}>
+                        <Typography className={classes.writerName}  >
                             {bookData.writerName}
                         </Typography>
-                        <Box 
-                            sx={{display: 'flex',
-                            alignItems: 'center'
+                        <Box className={classes.timeInfo}
+                            sx={{
                             }}
                         >
-                            <Icon icon={<AccessAlarm sx={{padding: '0px 5px 0px 0px'}}/>} />
-                            <Typography sx={{color: "gray", fontSize: "16px" }} variant="body">
+                            <Icon icon={<AccessAlarm className={classes.alarmIcon}  />} />
+                            <Typography  className={classes.time}   variant="body">
                                 {bookData.timeRead}
                             </Typography>
                         </Box>
                     </Box>
-                    <Box sx={{fontWeight: '700', display: 'flex'}}>
-                        <Button label='Read now' size='medium' variant='outlined' color='success' sx={{margin: '12px 24px 12px 0px'}} />
+                    <Box className={classes.clickables}>
+                        <Button label='Read now' size='medium' variant='outlined' color='success' className={classes.statusBox}/>
                         {currentlyReadingStatus 
                             ?
-                            <Button label= 'Finished Reading' size='medium' variant='contained' color='success' libraryStatusHandler={libraryStatusHandler} sx={{margin: '12px 24px 12px 0px'}}/>
+                            <Button label= 'Finished Reading' size='medium' variant='contained' color='success' onClick={libraryStatusHandler} classesName={classes.status}/>
                             :
-                            '.'
+                            ''
                         }
-                        <Button label='Send to Kindle' size='medium' sx={{color:'gray', margin: '12px 24px 12px 0px'}} endIcon={<ArrowForward />}/>
+                        <Button label='Send to Kindle' size='medium' className={classes.forward} endIcon={<ArrowForward />}/>
                     </Box>
                 </Box>
                 <Box>
                     <Image height='300' width='280' src= {bookData.url}/>
                 </Box>
             </Box>
-            <Box sx={{marginBottom: '260px', borderBottom: '1px solid lightGrey', padding: '20px 0px'}}>
+            <Box className={classes.footer}>
                 <Tab stateHandler={handleState} tabData={tabData}/>
                 <Box sx={{height: '100px'}}>
                     {moreInfo()}

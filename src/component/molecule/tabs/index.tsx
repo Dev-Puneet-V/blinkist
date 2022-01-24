@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import tabTheme from '../../../theme/tabTheme';
 import { ThemeProvider } from '@mui/material/styles';
+import theme from '../../../theme/mainTheme'
 export default function TabsWrappedLabel({tabData, ...props}: any) {
   const [value, setValue] = React.useState(tabData && tabData[0].value);
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -12,7 +13,7 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
   };
 
   return (
-    <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
+    <Box sx={{ borderBottom: 2, padding: '0px', borderColor: 'divider' }}>
     <ThemeProvider theme={tabTheme}>
       <Tabs
         value={value}
@@ -25,7 +26,7 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
         {
           tabData.map((currTab:any) => {
             return (
-              <Tab value={currTab.value} label={currTab.label}   sx={{fontWeight: 'bold', textTransform: 'unset'}}/>
+              <Tab value={currTab.value} label={currTab.label}   sx={{fontWeight: 'bold', fontSize: '18px', color: 'black'}} />
             );
           })
         }

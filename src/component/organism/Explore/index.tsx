@@ -5,15 +5,27 @@ import {Link} from 'react-router-dom';
 import {useState} from 'react';
 import NavIcon from '../../molecule/NavIcon';
 import theme from '../../../theme/mainTheme'
-import { makeStyles } from '@mui/styles';
+import { makeStyles as makeStyle } from '@mui/styles';
 import {RocketLaunchOutlined, AccountBalanceOutlined ,
      DesktopWindowsOutlined, ScienceOutlined,
      StairsOutlined, HistoryToggleOffOutlined,
      AttachMoneyOutlined, SpaOutlined, ConnectWithoutContactOutlined, ApartmentOutlined, AccessibleForwardOutlined, BorderColorOutlined, CakeOutlined, CategoryOutlined, FamilyRestroomOutlined, LibraryBooksOutlined, LocalAtmOutlined, ManageAccountsOutlined, ParkOutlined, PeopleAltOutlined, PrecisionManufacturingOutlined, PsychologyOutlined, SchoolOutlined, SelfImprovementOutlined, TimerOutlined, WcOutlined}
       from '@mui/icons-material';
 
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((themes)=>({
+    [themes.breakpoints.down('sm')]: {
+        topic: {
+            fontSize: '14px',
+            width: '100vw',
+        },
+        // container: {
+        //     flexWrap: 'wrap',
+        // }
+    },
+}));
 
-const useStyles = makeStyles({
+const useStyle = makeStyle({
     root: {
         backgroundColor: theme.palette.backgroundcolor.main,
         height: 'auto',
@@ -43,13 +55,15 @@ const useStyles = makeStyles({
     },
     nav:{
         width: '33.3%',
+        minWidth: '240px',
         color: theme.palette.textcolor.light
     }
 })
 
 
 const ExploreComponent = ()=>{
-    const classes = useStyles();
+    const classes = useStyle();
+    const allClass = useStyles();
     const tabData = [
         { 
           'value': 'category',
@@ -177,17 +191,17 @@ const ExploreComponent = ()=>{
 
     return (
         <Box className={classes.root}>
-                <Container className={classes.container}>
-                    <Typography  variant='subtitle3' sx={{color: '#116BE9', fontWeight: 'bold'}} mr={12}>
+                <Container className={`${classes.container} ${allClass.container}`}>
+                    <Typography  variant='subtitle3' sx={{color: '#116BE9', fontWeight: 'bold'}} mr={12} >
                         Explore by category
                     </Typography>
                     <Link to='/' style={{textDecoration: 'none'}}>
-                        <Typography variant='subtitle3' mr={12} className={classes.topicText}>
+                        <Typography variant='subtitle3' mr={12} className={`${classes.topicText} ${allClass.topic}`} >
                             See recently added titles
                         </Typography>
                     </Link>
                     <Link to='/' style={{textDecoration: 'none'}}>
-                        <Typography className={classes.topicText} variant='subtitle3' mr={12}>
+                        <Typography className={`${classes.topicText} ${allClass.topic}`} variant='subtitle3' mr={12} >
                             See popular titles
                         </Typography>
                     </Link>

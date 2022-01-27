@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 const ButtonComponent = (props: any) =>{
   return(
     <ThemeProvider theme={baseTheme}>
-      <Button {...props}>
+      <Button {...props} data-testid='button'>
         {props.label}
       </Button>
     </ThemeProvider>

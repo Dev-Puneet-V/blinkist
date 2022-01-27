@@ -11,7 +11,7 @@ import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import SearchBox from '../../molecule/Search';
 const HeaderComponent = (props : any) => {
-    const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+    const settings = ['Profile', 'Logout'];
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
     const [searchState, setSearchState] = useState(false);
@@ -34,6 +34,9 @@ const HeaderComponent = (props : any) => {
                 <NavLink to='/' style={{ textDecoration: 'none' }}>
                     <Logo {...props} />
                 </NavLink>
+
+                        
+
                     {
                         searchState
                         ?
@@ -42,19 +45,25 @@ const HeaderComponent = (props : any) => {
                             props.setBlankStatus(false)
                          } } /> 
                         :
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{flexGrow: 1}}>
                             <Button onClick={() => {
                                 setSearchState(true)
                                 props.setBlankStatus(true)
-                            }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px'}}/>
+                            }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/>
+                            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                                <Button onClick={() => {
+                                    setSearchState(true)
+                                    props.setBlankStatus(true)
+                                }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px'}}/>
 
-                            {/* <NavLink to='/' style={{ textDecoration: 'none' }}> */}
-                            {/* onMouseLeave={props.handleExploreMenu} */}
-                            <Button onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
-                            {/* </NavLink> */}
-                            <NavLink to='/library' style={{ textDecoration: 'none', }}>
-                                <Button size='medium' key={2} label='My Library' sx={{color:'black', margin: '5px 10px'}}/>
-                            </NavLink>
+                                {/* <NavLink to='/' style={{ textDecoration: 'none' }}> */}
+                                {/* onMouseLeave={props.handleExploreMenu} */}
+                                <Button onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
+                                {/* </NavLink> */}
+                                <NavLink to='/library' style={{ textDecoration: 'none', }}>
+                                    <Button size='medium' key={2} label='My Library' sx={{color:'black', margin: '5px 10px'}}/>
+                                </NavLink>
+                            </Box>
                         </Box>
                     }
                     <Box sx={{ flexGrow: 0 }}>
@@ -78,11 +87,17 @@ const HeaderComponent = (props : any) => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
+                        <MenuItem key={5} onClick={handleCloseNavMenu} sx={{display: {md : 'none'}}}>
+                            <NavLink to='/library' style={{ textDecoration: 'none', color: 'black'}}>
+                                <Typography textAlign="center">My Library</Typography>
+                            </NavLink>
+                        </MenuItem>
                         {settings.map((setting) => (
                             <MenuItem key={setting} onClick={handleCloseNavMenu}>
                             <Typography textAlign="center">{setting}</Typography>
                             </MenuItem>
                         ))}
+                            
                         </Menu>
                     </Box>
                 </Toolbar>

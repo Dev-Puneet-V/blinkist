@@ -5,10 +5,10 @@ import {Search} from '@mui/icons-material';
 import Card from '../../organism/Card';
 import Typography from '../../atom/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import theme from '../../../theme/mainTheme'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((themes)=>({
     input: {
         margin: `${theme.spacing(5)} 0px`,
         height: theme.spacing(6),
@@ -26,8 +26,11 @@ const useStyles = makeStyles({
         display: 'flex', 
         flexWrap: 'wrap', 
         alignItems: 'center'
-    }
-});
+    },
+    [themes.breakpoints.down('sm')]: {
+        
+      },
+}));
 
 
 const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, ...props}:any)=>{

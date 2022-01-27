@@ -5,28 +5,41 @@ import Box from '@mui/material/Box';
 import tabTheme from '../../../theme/tabTheme';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../../theme/mainTheme'
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((themes) => ({
+  [themes.breakpoints.down('sm')]: {
+      tab: {
+          fontSize: '13px',
+          width: '140px'
+      }
+  },
+})); 
+
 export default function TabsWrappedLabel({tabData, ...props}: any) {
+  const classes =useStyles();
   const [value, setValue] = React.useState(tabData && tabData[0].value);
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    console.log(newValue);
     setValue(newValue);
     props.stateHandler(newValue);
   };
 
   return (
-    <Box sx={{ borderBottom: 2, padding: '0px', borderColor: 'divider' }}>
+    <Box sx={{ padding: '0px', borderColor: 'divider' }}>
     <ThemeProvider theme={tabTheme}>
       <Tabs
+      style={{display: 'flex', justifyContent: 'space-around'}}
         value={value}
         onChange={handleChange}
         aria-label="wrapped label tabs example"
         autoCapitalize="none"
-        textColor={props.textColor ? props.textColor : "secondary"}
-        indicatorColor={props.indicatorColor ? props.indicatorColor : "secondary"}
+        indicatorColor={props.textColor ? props.textColor : "secondary"}
       >
         {
           tabData.map((currTab:any) => {
             return (
-              <Tab value={currTab.value} label={currTab.label}   sx={{fontWeight: 'bold', fontSize: '18px', color: 'black'}} />
+              <Tab value={currTab.value} label={currTab.label}   sx={{width: '200px', fontSize: '16px', borderBottom: '2px solid #E1ECFC', alignItems: 'start'}}  className={classes.tab}/>
             );
           })
         }

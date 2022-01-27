@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/App.test.tsx">
+    <testCase name="renders learn react link" duration="89">
+      <failure message="TestingLibraryElementError: Unable to find an element with the text: /learn react/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible."><![CDATA[TestingLibraryElementError: Unable to find an element with the text: /learn react/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, <script />, <style />
+<body>
+  <div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-14uxf7f-MuiContainer-root"
+    >
+      <span
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1gi5zzc-MuiCircularProgress-root"
+        role="progressbar"
+        style="width: 40px; height: 40px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20.2"
+            stroke-width="3.6"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</body>
+    at Object.getElementError (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@testing-library/dom/dist/config.js:38:19)
+    at /home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at getByText (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+    at Object.<anonymous> (/home/puneetv/Documents/web/react/Assignment/blinkist/src/App.test.tsx:7:30)
+    at Promise.then.completed (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:66:9)
+    at run (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-runner/build/runTest.js:475:34)
+    at TestRunner.runTests (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-runner/build/index.js:111:12)
+    at TestScheduler.scheduleTests (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@jest/core/build/runJest.js:404:19)
+    at _run10000 (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@jest/core/build/cli/index.js:320:7)
+    at runCLI (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/@jest/core/build/cli/index.js:173:3)
+    at Object.run (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-cli/build/cli/index.js:155:37)]]></failure>
+    </testCase>
+  </file>
+</testExecutions>

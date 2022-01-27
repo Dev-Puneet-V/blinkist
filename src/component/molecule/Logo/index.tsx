@@ -15,7 +15,8 @@ const LogoComponent = ({height=26, url, name, ...props}:any) => {
             <Typography 
                 sx={{
                     fontWeight: 'bold',
-                    fontSize: '18px'
+                    fontSize: '18px',
+                    display: {xs : 'none'}
                 }}
             >
                 {name}

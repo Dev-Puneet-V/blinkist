@@ -29,17 +29,20 @@ const SearchComponent = (props: any) => {
     return (
         <Box sx={{width: '500px', position: 'relative'}}>
             <Input sx={{
-                   margin: '30px 0px',
+                   margin: '30px 10px',
                    height: '46px',
-                   width: '100%',
+                   width: '90%',
                    maxWidth: '658px',
                    fontWeight: 'bold',
-                   fontSize: '20px'
+                   fontSize: {
+                            xs: '18px',
+                            md: '20px'
+                        }
                 }} startIcon={<Search />} endIcon={<Close onClick={props.searchStateHandler} sx={{cursor: 'pointer'}}/>} placeholder="Search by title or author" onKeyUp={inputDataHandler}/>
             <Box sx={{
                 backgroundColor: 'white',
                 height: 'auto',
-                width: '100%'
+                width: '90%',
             }}>
             <List sx={{ width: '100%', bgcolor: 'background.paper', position: 'absolute', top: '80px'}}>
       {filteredData !== null && filteredData.map((value : any) => (

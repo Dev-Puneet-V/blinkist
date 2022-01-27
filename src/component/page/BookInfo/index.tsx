@@ -9,8 +9,9 @@ import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import CircularProgress from '@mui/material/CircularProgress';
 import theme from '../../../theme/mainTheme'
-import {makeStyles} from '@mui/styles'
-const useStyle = makeStyles({
+import {makeStyles as makeStyle} from '@mui/styles'
+import { makeStyles } from '@material-ui/core/styles';
+const useStyle = makeStyle((themes) => ({
     topHeading: {
         margin: `${theme.spacing(3)} 0`
     },
@@ -67,10 +68,19 @@ const useStyle = makeStyles({
         borderBottom: '1px solid lightGrey', 
         padding: `${theme.spacing(4)} 0px`
     }
-});
+}));
+
+const useStyles = makeStyles((themes) => ({
+    [themes.breakpoints.down('sm')]: {
+        image: {
+            display: 'none'
+        }
+    },
+}));
 
 const BookInfoComponent = ({library, setLibrary}:any)=>{
     const classes = useStyle();
+    const allClass = useStyles();
     const { bookId } = useParams();
     const tabData = [
         { 
@@ -112,7 +122,6 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
         processor(bookId);
     }, []);
     const libraryStatusHandler = async (event:any) => {
-        console.log("hello")
         try{
             let index = library.currentlyReading.findIndex((curr:any) => curr.id == bookId);
             let currData = library.currentlyReading[index];
@@ -196,12 +205,12 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
                     </Box>
                 </Box>
                 <Box>
-                    <Image height='300' width='280' src= {bookData.url}/>
+                    <Image className={allClass.image} height='300' width='280' src= {bookData.url}/>
                 </Box>
             </Box>
             <Box className={classes.footer}>
                 <Tab stateHandler={handleState} tabData={tabData}/>
-                <Box sx={{height: '100px'}}>
+                <Box sx={{height: '140px'}}>
                     {moreInfo()}
                 </Box>
             </Box>

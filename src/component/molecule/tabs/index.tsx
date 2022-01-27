@@ -24,7 +24,6 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
     setValue(newValue);
     props.stateHandler(newValue);
   };
-
   return (
     <Box sx={{ padding: '0px', borderColor: 'divider' }}>
     <ThemeProvider theme={tabTheme}>

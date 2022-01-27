@@ -8,7 +8,6 @@ const SearchComponent = (props: any) => {
     const [filteredData, setFilteredData] = useState<any>(null);
     const inputDataHandler = async (event:any) => {
         let inputData = event.target.value;
-        console.log(event.target.value)
         setFilteredData(
             props.books.filter((currBook:any) => {
                 for(let property in currBook){

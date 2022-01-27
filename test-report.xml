@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/NavIcon/index.test.tsx">
-    <testCase name="render the nav icon as well as label" duration="123"/>
-    <testCase name="Left icon" duration="22"/>
-    <testCase name="Right icon" duration="17"/>
-  </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Button/index.test.tsx">
-    <testCase name="renders button with label" duration="197"/>
+    <testCase name="renders button with label" duration="186"/>
   </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.test.jsx">
-    <testCase name="should render progressbar" duration="229"/>
-    <testCase name="should render progressbar with value" duration="43"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Input/index.test.tsx">
-    <testCase name="should render input element" duration="256"/>
-    <testCase name="should be able to type in input" duration="56"/>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/NavIcon/index.test.tsx">
+    <testCase name="render the nav icon as well as label" duration="115"/>
+    <testCase name="Left icon" duration="21"/>
+    <testCase name="Right icon" duration="18"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Logo/index.test.tsx">
-    <testCase name="Logo" duration="92"/>
+    <testCase name="Logo" duration="107"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.test.jsx">
+    <testCase name="should render progressbar" duration="172"/>
+    <testCase name="should render progressbar with value" duration="29"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Input/index.test.tsx">
+    <testCase name="should render input element" duration="197"/>
+    <testCase name="should be able to type in input" duration="36"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Banner/index.test.tsx">
-    <testCase name="Banner Heading" duration="85"/>
-    <testCase name="Bannner discription" duration="15"/>
+    <testCase name="Banner Heading" duration="88"/>
+    <testCase name="Bannner discription" duration="17"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
-    <testCase name="should render progressbar" duration="45"/>
+    <testCase name="should render progressbar" duration="42"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Search/index.test.tsx">
-    <testCase name="Search Box render input box" duration="165"/>
-    <testCase name="Search Box should be able to type in input" duration="27"/>
-    <testCase name="Search Box Search Box filters results" duration="15"/>
+    <testCase name="Search Box render input box" duration="101"/>
+    <testCase name="Search Box should be able to type in input" duration="25"/>
+    <testCase name="Search Box Search Box filters results" duration="21"/>
   </file>
 </testExecutions>

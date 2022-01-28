@@ -1,5 +1,4 @@
 import {Container, Box} from '@mui/material';
-import Tab from '../../molecule/tabs';
 import Typography from '../../atom/Typography';
 import {Link} from 'react-router-dom';
 import {useState} from 'react';

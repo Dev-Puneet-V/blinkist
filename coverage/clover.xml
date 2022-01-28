@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643361108737" clover="3.2.0">
-  <project timestamp="1643361108738" name="All files">
-    <metrics statements="217" coveredstatements="58" conditionals="77" coveredconditionals="15" methods="69" coveredmethods="24" elements="363" coveredelements="97" complexity="0" loc="217" ncloc="217" packages="22" files="27" classes="27"/>
+<coverage generated="1643369805595" clover="3.2.0">
+  <project timestamp="1643369805596" name="All files">
+    <metrics statements="217" coveredstatements="58" conditionals="76" coveredconditionals="15" methods="69" coveredmethods="24" elements="362" coveredelements="97" complexity="0" loc="217" ncloc="217" packages="22" files="27" classes="27"/>
     <package name="src">
       <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/App.tsx">
@@ -71,10 +71,10 @@
       </file>
     </package>
     <package name="src.component.atom.ProgressBar">
-      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="cond" truecount="0" falsecount="1"/>
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
       </file>
     </package>
@@ -131,17 +131,17 @@
       </file>
     </package>
     <package name="src.component.molecule.tabs">
-      <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="3"/>
+      <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.tsx">
-        <metrics statements="8" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="3"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="1" type="stmt"/>
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="2" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.component.organism.Card">
@@ -162,18 +162,18 @@
       <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Explore/index.tsx">
         <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
         <line num="62" count="5" type="stmt"/>
         <line num="63" count="5" type="stmt"/>
-        <line num="64" count="5" type="stmt"/>
+        <line num="77" count="5" type="stmt"/>
         <line num="78" count="5" type="stmt"/>
-        <line num="79" count="5" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="82" count="5" type="stmt"/>
-        <line num="189" count="5" type="stmt"/>
-        <line num="208" count="130" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="81" count="5" type="stmt"/>
+        <line num="188" count="5" type="stmt"/>
+        <line num="207" count="130" type="stmt"/>
       </file>
     </package>
     <package name="src.component.organism.Footer">

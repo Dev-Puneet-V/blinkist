@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -134,8 +134,8 @@
 <a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,7 +164,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,7 +177,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -185,7 +185,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">48x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,8 +202,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Container, Box} from '@mui/material';
 import Logo from '../../molecule/Logo';
 import Typography from '../../atom/Typography';
-const FooterComponent = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(p</span>rops:any)=&gt;{</span>
-    const data = <span class="cstat-no" title="statement not covered" >[</span>
+const FooterComponent = (props:any)=&gt;{
+    const data = [
         {
             'heading': 'Editorial',
              'topics': [
@@ -232,28 +232,28 @@ const FooterComponent = <span class="cstat-no" title="statement not covered" ><s
              ]
         }
     ]
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
         &lt;Box {...props}&gt;
           &lt;Container sx={{display: 'flex', justifyContent:'space-between'}} &gt;
             &lt;Box&gt;
-                &lt;Logo height= {30} width={30} url= '/assets/logo.png' name= 'Blinkist'/&gt;
-                &lt;Typography variant="h6" sx={{fontWeight: 'bold', color: 'blue'}}&gt;
+                &lt;Logo height= {30} width={30} url= '/assets/logo.png' name= 'Blinkist' data-testid='logo'/&gt;
+                &lt;Typography variant="h6" sx={{fontWeight: 'bold', color: 'blue'}} data-testid='slogan'&gt;
                     Big ideas in small packages
                     Start learning now
                 &lt;/Typography&gt;
             &lt;/Box&gt;
             &lt;Box sx={{display: 'flex', justifyItems: 'center'}}&gt;
                 {
-                    data.map(<span class="fstat-no" title="function not covered" >cu</span>rr =&gt; {
-<span class="cstat-no" title="statement not covered" >                        return (&lt;Box sx={{</span>
+                    data.map((curr, i) =&gt; {
+                        return (&lt;Box key={`footer-${i}`} sx={{
                             margin: '0px 20px'
-                        }}&gt;
+                        }} data-testid='topics'&gt;
                             &lt;Typography pb={2} sx={{fontWeight: 'bold'}}&gt;
                                 {curr.heading}
                             &lt;/Typography&gt;
                             {
-                                curr.topics.map(<span class="fstat-no" title="function not covered" >cu</span>rrTopic =&gt; {
-<span class="cstat-no" title="statement not covered" >                                    return &lt;Typography pb={1}&gt;</span>
+                                curr.topics.map(currTopic =&gt; {
+                                    return &lt;Typography pb={1}&gt;
                                         {currTopic}
                                     &lt;/Typography&gt;
                                 })
@@ -274,7 +274,7 @@ export default FooterComponent;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jan 27 2022 20:16:36 GMT+0530 (India Standard Time)
+                at Fri Jan 28 2022 14:41:48 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

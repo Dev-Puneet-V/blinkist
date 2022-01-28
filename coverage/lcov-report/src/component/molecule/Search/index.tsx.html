@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,34 +130,35 @@
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">94x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,7 +178,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -205,18 +207,18 @@ import Typography from '../../atom/Typography';
 import {Link} from 'react-router-dom';
 const SearchComponent = (props: any) =&gt; {
     const [filteredData, setFilteredData] = useState&lt;any&gt;(null);
-    const inputDataHandler = <span class="fstat-no" title="function not covered" >as</span>ync (event:any) =&gt; {
-        let inputData = <span class="cstat-no" title="statement not covered" >event.target.value;</span>
-<span class="cstat-no" title="statement not covered" >        setFilteredData(</span>
-            props.books.filter(<span class="fstat-no" title="function not covered" >(c</span>urrBook:any) =&gt; {
-<span class="cstat-no" title="statement not covered" >                for(let property in currBook){</span>
-<span class="cstat-no" title="statement not covered" >                    if(inputData.length &gt; 0 &amp;&amp; currBook[property].length &gt;= inputData.length &amp;&amp; currBook[property].substr(0, inputData.length) === inputData){</span>
-<span class="cstat-no" title="statement not covered" >                        return true;</span>
+    const inputDataHandler = async (event:any) =&gt; {
+        let inputData = event.target.value;
+        setFilteredData(
+            props.books.filter((currBook:any) =&gt; {
+                for(let property in currBook){
+                    if(inputData.length &gt; 0 &amp;&amp; currBook[property].length &gt;= inputData.length &amp;&amp; currBook[property].substr(0, inputData.length) === inputData){
+                        return true;
                     }
                 }
-<span class="cstat-no" title="statement not covered" >                return false;</span>
-            }).map(<span class="fstat-no" title="function not covered" >(c</span>urrBook: any) =&gt; {
-<span class="cstat-no" title="statement not covered" >                return {</span>
+                return false;
+            }).map((currBook: any) =&gt; {
+                return {
                     'id': currBook.id,
                     'name': currBook.name,
                     'writerName': currBook.writerName
@@ -225,7 +227,7 @@ const SearchComponent = (props: any) =&gt; {
         )
     }
     return (
-        &lt;Box sx={{width: '500px', position: 'relative'}}&gt;
+        &lt;Box sx={{width: '500px', position: 'relative'}} data-testid='search-box'&gt;
             &lt;Input sx={{
                    margin: '30px 10px',
                    height: '46px',
@@ -236,18 +238,19 @@ const SearchComponent = (props: any) =&gt; {
                             xs: '18px',
                             md: '20px'
                         }
-                }} startIcon={&lt;Search /&gt;} endIcon={&lt;Close onClick={props.searchStateHandler} sx={{cursor: 'pointer'}}/&gt;} placeholder="Search by title or author" onKeyUp={inputDataHandler}/&gt;
+                }} startIcon={&lt;Search /&gt;} endIcon={&lt;Close onClick={props.searchStateHandler} sx={{cursor: 'pointer'}}/&gt;} placeholder="Search by title or author" onKeyUp={inputDataHandler} /&gt;
             &lt;Box sx={{
                 backgroundColor: 'white',
                 height: 'auto',
                 width: '90%',
             }}&gt;
             &lt;List sx={{ width: '100%', bgcolor: 'background.paper', position: 'absolute', top: '80px'}}&gt;
-      {filteredData !== null &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >filteredData.map(<span class="fstat-no" title="function not covered" >(v</span>alue : any) =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >             &lt;Link to={`/book-info/${value.id}`} style={{textDecoration: 'none', color: 'black'}}&gt;</span>
+      {filteredData !== null &amp;&amp; filteredData.map((value : any) =&gt; (
+             &lt;Link to={`/book-info/${value.id}`} style={{textDecoration: 'none', color: 'black'}}&gt;
                 &lt;ListItem
                 key={value.id}
                     sx={{display: 'flex'}}
+                    data-testid='result'
                 &gt;
                 &lt;Typography sx={{fontWeight: 'bold'}}&gt;
                     {value.name}
@@ -271,7 +274,7 @@ export default SearchComponent;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jan 27 2022 20:16:36 GMT+0530 (India Standard Time)
+                at Fri Jan 28 2022 14:41:48 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

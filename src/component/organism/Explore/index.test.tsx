@@ -10,8 +10,7 @@ function renderExplore() {
     );
   }
 
-  describe("Explore", () => {
-
+describe("Explore", () => {
     test('render Explore by category heading', () => {
         renderExplore();
         const linkElement = screen.getByText('Explore by category')

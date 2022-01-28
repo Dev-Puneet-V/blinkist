@@ -18,10 +18,7 @@ const useStyles = makeStyles((themes)=>({
         topic: {
             fontSize: '14px',
             width: '100vw',
-        },
-        // container: {
-        //     flexWrap: 'wrap',
-        // }
+        }
     },
 }));
 

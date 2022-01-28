@@ -34,7 +34,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "coverage": "CI=true npm test -- --coverage --testResultsProcessor=jest-sonar-reporter"
+    "coverage": "CI=true npm test -- --coverage --collectCoverageFrom=!src/**/*.stories.tsx --testResultsProcessor=jest-sonar-reporter"
   },
   "eslintConfig": {
     "extends": [

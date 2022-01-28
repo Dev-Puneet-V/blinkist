@@ -4,7 +4,6 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import tabTheme from '../../../theme/tabTheme';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from '../../../theme/mainTheme'
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((themes) => ({
@@ -17,10 +16,9 @@ const useStyles = makeStyles((themes) => ({
 })); 
 
 export default function TabsWrappedLabel({tabData, ...props}: any) {
-  const classes =useStyles();
+  const classes = useStyles();
   const [value, setValue] = React.useState(tabData && tabData[0].value);
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    console.log(newValue);
     setValue(newValue);
     props.stateHandler(newValue);
   };
@@ -38,7 +36,7 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
         {
           tabData.map((currTab:any) => {
             return (
-              <Tab value={currTab.value} label={currTab.label}   sx={{width: '200px', fontSize: '16px', borderBottom: '2px solid #E1ECFC', alignItems: 'start'}}  className={classes.tab}/>
+              <Tab value={currTab.value} label={currTab.label}  data-testid='tab' sx={{width: '200px', fontSize: '16px', borderBottom: '2px solid #E1ECFC', alignItems: 'start'}}  className={classes.tab}/>
             );
           })
         }

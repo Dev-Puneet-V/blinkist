@@ -26,7 +26,7 @@ const SearchComponent = (props: any) => {
         )
     }
     return (
-        <Box sx={{width: '500px', position: 'relative'}}>
+        <Box sx={{width: '500px', position: 'relative'}} data-testid='search-box'>
             <Input sx={{
                    margin: '30px 10px',
                    height: '46px',
@@ -37,7 +37,7 @@ const SearchComponent = (props: any) => {
                             xs: '18px',
                             md: '20px'
                         }
-                }} startIcon={<Search />} endIcon={<Close onClick={props.searchStateHandler} sx={{cursor: 'pointer'}}/>} placeholder="Search by title or author" onKeyUp={inputDataHandler}/>
+                }} startIcon={<Search />} endIcon={<Close onClick={props.searchStateHandler} sx={{cursor: 'pointer'}}/>} placeholder="Search by title or author" onKeyUp={inputDataHandler} />
             <Box sx={{
                 backgroundColor: 'white',
                 height: 'auto',
@@ -49,6 +49,7 @@ const SearchComponent = (props: any) => {
                 <ListItem
                 key={value.id}
                     sx={{display: 'flex'}}
+                    data-testid='result'
                 >
                 <Typography sx={{fontWeight: 'bold'}}>
                     {value.name}

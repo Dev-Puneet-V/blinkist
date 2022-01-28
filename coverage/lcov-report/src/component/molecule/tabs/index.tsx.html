@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -109,9 +109,7 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,8 +117,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,14 +127,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -150,7 +146,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,10 +161,9 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import tabTheme from '../../../theme/tabTheme';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from '../../../theme/mainTheme'
 import { makeStyles } from '@material-ui/core/styles';
 &nbsp;
-const useStyles = <span class="cstat-no" title="statement not covered" >makeStyles(<span class="fstat-no" title="function not covered" >(t</span>hemes) =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span>
+const useStyles = makeStyles((themes) =&gt; ({
   [themes.breakpoints.down('sm')]: {
       tab: {
           fontSize: '13px',
@@ -177,15 +172,14 @@ const useStyles = <span class="cstat-no" title="statement not covered" >makeStyl
   },
 })); 
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >TabsWrappedLabel(</span>{tabData, ...props}: any) {
-  const classes =<span class="cstat-no" title="statement not covered" >useStyles();</span>
-  const [value, setValue] = <span class="cstat-no" title="statement not covered" >React.useState(tabData &amp;&amp; tabData[0].value);</span>
-  const handleChange = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>vent: React.SyntheticEvent, newValue: string) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    console.log(newValue);</span>
+export default function TabsWrappedLabel({tabData, ...props}: any) {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(tabData &amp;&amp; tabData[0].value);
+  const handleChange = <span class="fstat-no" title="function not covered" >(e</span>vent: React.SyntheticEvent, newValue: string) =&gt; {
 <span class="cstat-no" title="statement not covered" >    setValue(newValue);</span>
 <span class="cstat-no" title="statement not covered" >    props.stateHandler(newValue);</span>
   };
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;Box sx={{ padding: '0px', borderColor: 'divider' }}&gt;
     &lt;ThemeProvider theme={tabTheme}&gt;
       &lt;Tabs
@@ -194,12 +188,12 @@ export default function <span class="fstat-no" title="function not covered" >Tab
         onChange={handleChange}
         aria-label="wrapped label tabs example"
         autoCapitalize="none"
-        indicatorColor={props.textColor ? props.textColor : "secondary"}
+        indicatorColor={props.textColor ? <span class="branch-0 cbranch-no" title="branch not covered" >props.textColor </span>: "secondary"}
       &gt;
         {
-          tabData.map(<span class="fstat-no" title="function not covered" >(c</span>urrTab:any) =&gt; {
-<span class="cstat-no" title="statement not covered" >            return (</span>
-              &lt;Tab value={currTab.value} label={currTab.label}   sx={{width: '200px', fontSize: '16px', borderBottom: '2px solid #E1ECFC', alignItems: 'start'}}  className={classes.tab}/&gt;
+          tabData.map((currTab:any) =&gt; {
+            return (
+              &lt;Tab value={currTab.value} label={currTab.label}  data-testid='tab' sx={{width: '200px', fontSize: '16px', borderBottom: '2px solid #E1ECFC', alignItems: 'start'}}  className={classes.tab}/&gt;
             );
           })
         }
@@ -214,7 +208,7 @@ export default function <span class="fstat-no" title="function not covered" >Tab
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jan 27 2022 20:16:36 GMT+0530 (India Standard Time)
+                at Fri Jan 28 2022 14:41:48 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

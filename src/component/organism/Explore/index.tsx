@@ -207,8 +207,8 @@ const ExploreComponent = ()=>{
                     </Link>
                 </Container>
                 <Container className={classes.navs}>
-                    {data.map((currData)=>{
-                        return <Box className={classes.nav}><NavIcon {...currData}/></Box>
+                    {data.map((currData, i)=>{
+                        return <Box key={i} className={classes.nav}><NavIcon {...currData} data-testid='nav-icon'/></Box>
                     })}
                 </Container>
         </Box>

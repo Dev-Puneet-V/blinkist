@@ -14,3 +14,9 @@ test('should render progressbar with value', () => {
     expect((progressBarElement).getAttribute('aria-valuenow')).toBe('60');
 });
   
+
+test('should render 0 for value undefined', () => {
+  render(<ProgressBar/>);
+  const progressBarElement = screen.getByRole('progressbar');
+  expect((progressBarElement).getAttribute('aria-valuenow')).toBe('0');
+});

@@ -18,17 +18,20 @@ const useStyles = makeStyles((themes) => ({
 export default function TabsWrappedLabel({tabData, ...props}: any) {
   const classes = useStyles();
   const [value, setValue] = React.useState(tabData && tabData[0].value);
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-    props.stateHandler(newValue);
-  };
+  // const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  //   setValue(newValue);
+  //   props.stateHandler(newValue);
+  // };
   return (
     <Box sx={{ padding: '0px', borderColor: 'divider' }}>
     <ThemeProvider theme={tabTheme}>
       <Tabs
       style={{display: 'flex', justifyContent: 'space-around'}}
         value={value}
-        onChange={handleChange}
+        onChange={()=>{
+          setValue(newValue);
+          props.stateHandler(newValue);
+        }
         aria-label="wrapped label tabs example"
         autoCapitalize="none"
         indicatorColor= "secondary"

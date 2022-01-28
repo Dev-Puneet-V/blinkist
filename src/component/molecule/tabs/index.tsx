@@ -28,10 +28,10 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
       <Tabs
       style={{display: 'flex', justifyContent: 'space-around'}}
         value={value}
-        onChange={()=>{
+        onChange={(event: React.SyntheticEvent, newValue: string)=>{
           setValue(newValue);
           props.stateHandler(newValue);
-        }
+        }}
         aria-label="wrapped label tabs example"
         autoCapitalize="none"
         indicatorColor= "secondary"

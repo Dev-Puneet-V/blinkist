@@ -1,12 +1,10 @@
 import Logo from '../../molecule/Logo';
-import Icon from '../../atom/Icon';
 import Typography from '../../atom/Typography';
 import {Box,  Menu, MenuItem, Container, Tooltip} from '@mui/material';
-import {ArrowDropUp, ArrowDropDown, Search, KeyboardArrowUp, KeyboardArrowDown} from '@mui/icons-material';
+import {Search, KeyboardArrowUp, KeyboardArrowDown} from '@mui/icons-material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '../../atom/Button';
-import Image from '../../atom/Image';
 import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import SearchBox from '../../molecule/Search';
@@ -15,9 +13,6 @@ const HeaderComponent = (props : any) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
     const [searchState, setSearchState] = useState(false);
-    const handleOpenNavMenu = (event: any) => {
-        setAnchorElNav(event.currentTarget);
-      };
     const handleOpenUserMenu = (event: any) => {
         setAnchorElUser(event.currentTarget);
     };

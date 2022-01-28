@@ -41,7 +41,12 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
                 value={currTab.value} 
                 label={currTab.label}  
                 data-testid={`tab-${currTab.value}`} 
-                sx={{width: '200px', fontSize: '16px', borderBottom: '2px solid #E1ECFC', alignItems: 'start'}}  
+                sx={{
+                  width: '200px', 
+                  fontSize: '16px', 
+                  borderBottom: '2px solid #E1ECFC', 
+                  alignItems: 'start'
+                }}  
                 className={classes.tab}/>
             );
           })

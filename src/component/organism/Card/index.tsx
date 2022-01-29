@@ -70,6 +70,7 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minu
                     backgroundColor: `${!inLibrary && hoverState ? theme.palette.primary.light : 'white'}`
                 }} 
                 style={styles.content}
+                data-testid='card-box'
             >
                 <Typography variant="subtitle1" style={styles.bookName} >{bookName}</Typography>
                 <Typography variant="body1" color={theme.palette.textcolor.light}>{writerName}</Typography>

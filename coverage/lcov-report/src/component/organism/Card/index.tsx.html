@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.82% </span>
+                <span class="strong">94.11% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/17</span>
+                <span class='fraction'>16/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -175,7 +175,8 @@
 <a name='L110'></a><a href='#L110'>110</a>
 <a name='L111'></a><a href='#L111'>111</a>
 <a name='L112'></a><a href='#L112'>112</a>
-<a name='L113'></a><a href='#L113'>113</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,12 +230,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -343,22 +345,23 @@ const styles={
 const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = <span class="branch-0 cbranch-no" title="branch not covered" >"0-minute read",</span> progress, width, inLibrary, libraryHandler, ...props}: any) =&gt; {
     const [hoverState, setHoverState] = useState(false);
     const [bookLibraryStatus, setBookLibraryStatus] = useState(inLibrary);
-    const  hoverStateHandler = <span class="fstat-no" title="function not covered" >()</span>=&gt;{
-<span class="cstat-no" title="statement not covered" >        setHoverState(!hoverState)</span>
+    const  hoverStateHandler = ()=&gt;{
+        setHoverState(!hoverState)
     }
     return(
-        &lt;Paper elevation={1} sx={{
+        &lt;Paper data-testid='card-body' elevation={1} sx={{
                 width: `${width}px`,
-                backgroundColor: `${!inLibrary &amp;&amp; hoverState ? <span class="branch-0 cbranch-no" title="branch not covered" >theme.palette.primary.light </span>: 'white'}`
+                backgroundColor: `${!inLibrary &amp;&amp; hoverState ? theme.palette.primary.light : 'white'}`
             }}
             onMouseEnter={hoverStateHandler} onMouseLeave={hoverStateHandler} style={styles.parent}&gt;
             &lt;Link to={`/book-info/${props.cardId}`}&gt;
                 &lt;Image  height={imgHeight} width={width} alt="blinkist" component="img"  src={url} style={styles.image}/&gt;
             &lt;/Link&gt;
             &lt;Box sx={{
-                    backgroundColor: `${!inLibrary &amp;&amp; hoverState ? <span class="branch-0 cbranch-no" title="branch not covered" >theme.palette.primary.light </span>: 'white'}`
+                    backgroundColor: `${!inLibrary &amp;&amp; hoverState ? theme.palette.primary.light : 'white'}`
                 }} 
                 style={styles.content}
+                data-testid='card-box'
             &gt;
                 &lt;Typography variant="subtitle1" style={styles.bookName} &gt;{bookName}&lt;/Typography&gt;
                 &lt;Typography variant="body1" color={theme.palette.textcolor.light}&gt;{writerName}&lt;/Typography&gt;
@@ -374,19 +377,19 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = <span c
                         justifyContent: 'end'
                     }}
                 &gt;
-                {bookLibraryStatus ? <span class="branch-0 cbranch-no" title="branch not covered" >&lt;Icon  icon={&lt;MoreHoriz sx={{padding: theme.spacing(0)} } style={styles.rightIcon}/&gt;} /&gt; </span>: ''}
+                {bookLibraryStatus ? &lt;Icon  icon={&lt;MoreHoriz sx={{padding: theme.spacing(0)} } style={styles.rightIcon}/&gt;} /&gt; : ''}
                 &lt;/Box&gt;
             &lt;/Box&gt;
             &lt;Box sx={{ position: 'relative'}}&gt;
                 {bookLibraryStatus ? 
-<span class="branch-0 cbranch-no" title="branch not covered" >                    &lt;ProgressBar width={100} value={progress} color='primary'/&gt; </span>
+                    &lt;ProgressBar width={100} value={progress} color='primary'/&gt; 
                     :
                     &lt;Box onClick={<span class="fstat-no" title="function not covered" >e </span>=&gt; 
 <span class="cstat-no" title="statement not covered" >                        libraryHandler(props.cardId, setBookLibraryStatus)</span>
                     } 
                     sx={{
-                        color: `${!hoverState ? '#0365F2' : <span class="branch-1 cbranch-no" title="branch not covered" >'white'}</span>`,
-                        backgroundColor: `${hoverState ? <span class="branch-0 cbranch-no" title="branch not covered" >'#0365F2' </span>: 'white'}`
+                        color: `${!hoverState ? '#0365F2' : 'white'}`,
+                        backgroundColor: `${hoverState ? '#0365F2' : 'white'}`
                     }} style={styles.libraryButton}&gt;
                         &lt;Icon variant="body1"  icon={&lt;AddIcon /&gt;} /&gt;
                         &lt;Typography  variant="body1"&gt;
@@ -406,7 +409,7 @@ export default CardComponent; </pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sat Jan 29 2022 11:21:49 GMT+0530 (India Standard Time)
+                at Sat Jan 29 2022 11:41:11 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

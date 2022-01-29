@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import MyLibrary from '.';
 import {BrowserRouter} from 'react-router-dom';
 
@@ -32,6 +32,18 @@ describe('Library', () => {
         const linkElement = screen.queryByTestId('circular-progress');
         expect(linkElement).not.toBeInTheDocument();
     });
+    test('should render same no of finished books',async () => {
+        render(router(books, library));
+        const tabsElement = screen.getByTestId(/tab-finished/);
+        fireEvent.click(tabsElement);
+        const progressBarElement = await screen.findAllByRole('progressbar');
+        expect(progressBarElement.length).toBe(library.finishedBook.length);
+    });
+    test('should render same no of currently books',async () => {
+        render(router(books, library));
+        const tabsElement = screen.getByTestId(/tab-reading/);
+        fireEvent.click(tabsElement);
+        const progressBarElement = await screen.findAllByRole('progressbar');
+        expect(progressBarElement.length).toBe(library.currentlyReading.length);
+    });
 })
-
-            

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643444501882" clover="3.2.0">
-  <project timestamp="1643444501883" name="All files">
-    <metrics statements="211" coveredstatements="81" conditionals="76" coveredconditionals="37" methods="67" coveredmethods="31" elements="354" coveredelements="149" complexity="0" loc="211" ncloc="211" packages="22" files="27" classes="27"/>
+<coverage generated="1643448832986" clover="3.2.0">
+  <project timestamp="1643448832987" name="All files">
+    <metrics statements="212" coveredstatements="86" conditionals="78" coveredconditionals="39" methods="67" coveredmethods="33" elements="357" coveredelements="158" complexity="0" loc="212" ncloc="212" packages="22" files="27" classes="27"/>
     <package name="src">
       <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/App.tsx">
@@ -50,7 +50,7 @@
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Icon/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="3" type="stmt"/>
-        <line num="3" count="27" type="stmt"/>
+        <line num="3" count="47" type="stmt"/>
       </file>
     </package>
     <package name="src.component.atom.Image">
@@ -58,7 +58,7 @@
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Image/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="3" count="19" type="stmt"/>
+        <line num="3" count="29" type="stmt"/>
       </file>
     </package>
     <package name="src.component.atom.Input">
@@ -75,7 +75,7 @@
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="3" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
+        <line num="4" count="18" type="stmt"/>
       </file>
     </package>
     <package name="src.component.atom.Typography">
@@ -83,7 +83,7 @@
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="9" type="stmt"/>
-        <line num="5" count="258" type="stmt"/>
+        <line num="5" count="291" type="stmt"/>
       </file>
     </package>
     <package name="src.component.molecule.Banner">
@@ -134,14 +134,14 @@
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="39" count="10" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="39" count="16" type="stmt"/>
       </file>
     </package>
     <package name="src.component.organism.Card">
@@ -150,11 +150,11 @@
         <metrics statements="8" coveredstatements="8" conditionals="17" coveredconditionals="16" methods="3" coveredmethods="3"/>
         <line num="12" count="2" type="stmt"/>
         <line num="54" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="55" count="13" type="stmt"/>
-        <line num="56" count="13" type="stmt"/>
-        <line num="57" count="13" type="stmt"/>
+        <line num="55" count="23" type="stmt"/>
+        <line num="56" count="23" type="stmt"/>
+        <line num="57" count="23" type="stmt"/>
         <line num="58" count="2" type="stmt"/>
-        <line num="60" count="13" type="stmt"/>
+        <line num="60" count="23" type="stmt"/>
         <line num="97" count="1" type="stmt"/>
       </file>
     </package>
@@ -293,28 +293,29 @@
       </file>
     </package>
     <package name="src.component.page.MyLibrary">
-      <metrics statements="19" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="3"/>
+      <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/MyLibrary/index.tsx">
-        <metrics statements="19" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
         <line num="10" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="38" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="38" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="4" type="stmt"/>
-        <line num="45" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="81" count="2" type="stmt"/>
+        <line num="42" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
+        <line num="45" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+        <line num="83" count="5" type="stmt"/>
       </file>
     </package>
     <package name="src.component.template.Template">

@@ -1,66 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.test.tsx">
-    <testCase name="should render progressbar" duration="246"/>
-    <testCase name="should render progressbar with value" duration="73"/>
-    <testCase name="should render 0 for value undefined" duration="96"/>
+    <testCase name="should render progressbar" duration="504"/>
+    <testCase name="should render progressbar with value" duration="107"/>
+    <testCase name="should render 0 for value undefined" duration="89"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Footer/index.test.tsx">
-    <testCase name="Footer renders logo" duration="511"/>
-    <testCase name="Footer renders slogan text" duration="136"/>
-    <testCase name="Footer renders three topics" duration="63"/>
+    <testCase name="Footer renders logo" duration="629"/>
+    <testCase name="Footer renders slogan text" duration="97"/>
+    <testCase name="Footer renders three topics" duration="107"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Banner/index.test.tsx">
-    <testCase name="Banner Heading" duration="182"/>
-    <testCase name="Bannner discription" duration="40"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.test.tsx">
-    <testCase name="should render 2 tabw for 2 length data" duration="559"/>
-    <testCase name="should have green indicator color for currently reading tab by default" duration="114"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/NavIcon/index.test.tsx">
-    <testCase name="render the nav icon as well as label" duration="114"/>
-    <testCase name="Left icon" duration="19"/>
-    <testCase name="Right icon" duration="23"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Button/index.test.tsx">
-    <testCase name="renders button with label" duration="187"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
-    <testCase name="should render progressbar" duration="72"/>
+    <testCase name="Banner Heading" duration="192"/>
+    <testCase name="Bannner discription" duration="60"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Input/index.test.tsx">
-    <testCase name="should render input element" duration="181"/>
-    <testCase name="should be able to type in input" duration="43"/>
+    <testCase name="should render input element" duration="267"/>
+    <testCase name="should be able to type in input" duration="56"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Logo/index.test.tsx">
-    <testCase name="Logo" duration="149"/>
+    <testCase name="Logo" duration="143"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
+    <testCase name="should render progressbar" duration="79"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.test.tsx">
+    <testCase name="should render 2 tabw for 2 length data" duration="633"/>
+    <testCase name="should have green indicator color for currently reading tab by default" duration="131"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/NavIcon/index.test.tsx">
+    <testCase name="render the nav icon as well as label" duration="146"/>
+    <testCase name="Left icon" duration="103"/>
+    <testCase name="Right icon" duration="60"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Button/index.test.tsx">
+    <testCase name="renders button with label" duration="279"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Icon/index.test.tsx">
-    <testCase name="should render passed icon" duration="84"/>
+    <testCase name="should render passed icon" duration="83"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Search/index.test.tsx">
-    <testCase name="should render input box" duration="417"/>
-    <testCase name="should render filtered result of length 2 for Employee search" duration="437"/>
+    <testCase name="should render input box" duration="330"/>
+    <testCase name="should render filtered result of length 2 for Employee search" duration="472"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Card/index.test.tsx">
-    <testCase name="should render same bookname text" duration="255"/>
-    <testCase name="should render same writer name text" duration="42"/>
-    <testCase name="should render same time read text" duration="43"/>
-    <testCase name="should render white background color if inLibrary is true" duration="149"/>
-    <testCase name="should render different color of card body when inLibrary is false as well as in hoveredState" duration="102"/>
-    <testCase name="should render different color od card box when inLibrary is false as well as in hoveredState" duration="65"/>
-    <testCase name="should card-library-handler be clickable and when inLIbrary is false" duration="36"/>
+    <testCase name="should render same bookname text" duration="397"/>
+    <testCase name="should render same writer name text" duration="64"/>
+    <testCase name="should render same time read text" duration="68"/>
+    <testCase name="should render white background color if inLibrary is true" duration="141"/>
+    <testCase name="should render different color of card body when inLibrary is false as well as in hoveredState" duration="85"/>
+    <testCase name="should render different color od card box when inLibrary is false as well as in hoveredState" duration="50"/>
+    <testCase name="should card-library-handler be clickable and when inLIbrary is false" duration="41"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Explore/index.test.tsx">
-    <testCase name="Explore render Explore by category heading" duration="488"/>
-    <testCase name="Explore should recently added text to be clickable" duration="180"/>
-    <testCase name="Explore should See popular titles to be clickable" duration="199"/>
-    <testCase name="Explore Explore by category text should be blue" duration="246"/>
-    <testCase name="Explore Nav Icon count should be 26" duration="182"/>
+    <testCase name="Explore render Explore by category heading" duration="339"/>
+    <testCase name="Explore should recently added text to be clickable" duration="155"/>
+    <testCase name="Explore should See popular titles to be clickable" duration="132"/>
+    <testCase name="Explore Explore by category text should be blue" duration="158"/>
+    <testCase name="Explore Nav Icon count should be 26" duration="113"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/MyLibrary/index.test.tsx">
-    <testCase name="Library renders cicular progress bar if books are not available" duration="407"/>
-    <testCase name="Library should not render cicular progress bar if books are available" duration="239"/>
+    <testCase name="Library renders cicular progress bar if books are not available" duration="299"/>
+    <testCase name="Library should not render cicular progress bar if books are available" duration="116"/>
+    <testCase name="Library should render same no of finished books" duration="278"/>
+    <testCase name="Library should render same no of currently books" duration="89"/>
   </file>
 </testExecutions>

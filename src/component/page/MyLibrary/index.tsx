@@ -52,10 +52,11 @@ const MyLibrary = ({books, library}:any) =>{
                         timeRead= {currData.timeRead}
                         width= {350}
                         inLibrary= {true}
-                        progress= {curr.progress}
+                        progress= {curr.progress} 
+                        data-testid='cards-reading'
                     />
                 })
-            }else{
+            }else if(currState === 'finished'){
                 return data.finishedBook.map((curr:any) => {
                     let currData = books[Number.parseInt(curr.id)];
                     return <Card 
@@ -69,6 +70,7 @@ const MyLibrary = ({books, library}:any) =>{
                         width= {350}
                         inLibrary= {true}
                         progress= {100}
+                        data-testid='cards-finished'
                     />
                 });
             }

@@ -48,7 +48,7 @@ const HeaderComponent = (props : any) => {
                                     props.setBlankStatus(true)
                                 }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px'}}/>
 
-                                <Button onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
+                                <Button data-testid='handle-explore' onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
                                
                                 <NavLink to='/library' style={{ textDecoration: 'none', }}>
                                     <Button size='medium' key={2} label='My Library' sx={{color:'black', margin: '5px 10px'}}/>

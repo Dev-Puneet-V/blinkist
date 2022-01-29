@@ -104,7 +104,6 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
     }
     const checkInLibrary = ()=>{
         for(let curr of library.currentlyReading){
-            console.log(curr.id,bookId)
             if(curr.id == bookId){
                 setcurrentlyReadingStatus(true)
                 return;
@@ -197,7 +196,7 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
                         <Button label='Read now' size='medium' variant='outlined' color='success' className={classes.statusBox}/>
                         {currentlyReadingStatus 
                             ?
-                            <Button label= 'Finished Reading' size='medium' variant='contained' color='success' onClick={libraryStatusHandler} classesName={classes.status}/>
+                            <Button data-testid='status-handler' label= 'Finished Reading' size='medium' variant='contained' color='success' onClick={libraryStatusHandler} classesName={classes.status}/>
                             :
                             ''
                         }

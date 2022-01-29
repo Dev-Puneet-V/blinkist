@@ -6,9 +6,8 @@ import Footer from '../../../component/organism/Footer';
 import {Box, Container} from '@mui/material';
 import Explore from '../../../component/organism/Explore';
 import {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Route, Routes, Link, NavLink} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import CircularProgress from '@mui/material/CircularProgress';
-import theme from '../../../theme/mainTheme'
 import Blank from '../../../component/atom/Blank';
 const TemplateComponent = () => {
     const [exploreOption, setExploreOption] = useState<boolean>(false);
@@ -39,7 +38,7 @@ const TemplateComponent = () => {
         (!data || !library || !books) 
         ?
         <Container sx={{display: 'flex', justifyContent:'center', alignItems: 'center', height: '100vh'}}>
-            <CircularProgress /> 
+            <CircularProgress data-testid='circular-progress'/> 
         </Container>
         :
         <Box sx={{position: 'relative', height: '100vh'}}>
@@ -77,7 +76,7 @@ const TemplateComponent = () => {
                         padding: '24px 0px',
                         marginTop: '24px'
                     }} />
-                    {exploreOption ? <Explore /> : ''}
+                    {exploreOption ? <Explore data-testid='explore-box'/> : ''}
                     
                 </Box>
             </Router>

@@ -39,7 +39,7 @@ const TemplateComponent = () => {
         (!data || !library || !books) 
         ?
         <Container sx={{display: 'flex', justifyContent:'center', alignItems: 'center', height: '100vh'}}>
-        <CircularProgress /> 
+            <CircularProgress /> 
         </Container>
         :
         <Box sx={{position: 'relative', height: '100vh'}}>

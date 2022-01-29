@@ -25,4 +25,12 @@ describe('Book Info', () => {
         const linkElement = screen.getByTestId('circular-progress');
         expect(linkElement).toBeInTheDocument()
     });
+    test('should not render circular bar if data is not empty', async () => {
+        render(router(library));
+        await new Promise((r) => setTimeout(r, 2000));
+        const linkElement = screen.queryByTestId('circular-progress');
+        expect(linkElement).not.toBeInTheDocument()
+    });
 });
+
+jest.setTimeout(30000);

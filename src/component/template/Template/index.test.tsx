@@ -35,13 +35,13 @@ describe('Template', () => {
     //     const linkElement = screen.queryByTestId('circular-progress');
     //     expect(linkElement).not.toBeInTheDocument()
     // });
-    test('handle-explore button should be clickable', () => {
-        render(router());
-        const linkElement = screen.getByTestId('handle-explore');
-        fireEvent.click(linkElement);
-        const exploreBoxElement = screen.queryByTestId('explore-box');
-        expect(exploreBoxElement).toBeInTheDocument()
-    });
+    // test('handle-explore button should be clickable', () => {
+    //     render(router());
+    //     const linkElement = screen.getByTestId('handle-explore');
+    //     fireEvent.click(linkElement);
+    //     const exploreBoxElement = screen.queryByTestId('explore-box');
+    //     expect(exploreBoxElement).toBeInTheDocument()
+    // });
 });
 
 jest.setTimeout(30000);

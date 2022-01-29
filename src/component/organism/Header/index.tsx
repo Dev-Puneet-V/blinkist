@@ -23,7 +23,7 @@ const HeaderComponent = (props : any) => {
         setAnchorElUser(null);
     };
     return (
-        <AppBar position="fixed" sx={{color: 'black', backgroundColor: 'white', boxShadow: 'none'}}>
+        <AppBar position="fixed" sx={{color: 'black', backgroundColor: 'white', boxShadow: 'none'}} data-testid='box'>
             <Container>
                 <Toolbar sx={{height: '86px',  display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
                 <NavLink to='/' style={{ textDecoration: 'none' }}>
@@ -38,10 +38,10 @@ const HeaderComponent = (props : any) => {
                          } } data-testid='search-box'/> 
                         :
                         <Box sx={{flexGrow: 1}} data-testid='nav'>
-                            <Button onClick={() => {
+                            <Button data-testid='search-state-button' onClick={() => {
                                 setSearchState(true)
                                 props.setBlankStatus(true)
-                            }} size='large' data-testid='search-state-button' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/>
+                            }}  size='large' label='search'  key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/>
                             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                                 <Button onClick={() => {
                                     setSearchState(true)

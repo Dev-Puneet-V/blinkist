@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643453031880" clover="3.2.0">
-  <project timestamp="1643453031880" name="All files">
-    <metrics statements="212" coveredstatements="110" conditionals="78" coveredconditionals="45" methods="67" coveredmethods="41" elements="357" coveredelements="196" complexity="0" loc="212" ncloc="212" packages="22" files="27" classes="27"/>
+<coverage generated="1643453439796" clover="3.2.0">
+  <project timestamp="1643453439796" name="All files">
+    <metrics statements="208" coveredstatements="109" conditionals="78" coveredconditionals="45" methods="66" coveredmethods="41" elements="352" coveredelements="195" complexity="0" loc="208" ncloc="208" packages="22" files="27" classes="27"/>
     <package name="src">
       <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/App.tsx">
@@ -261,9 +261,9 @@
       </file>
     </package>
     <package name="src.component.page.Home">
-      <metrics statements="26" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="7"/>
+      <metrics statements="22" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
       <file name="index.tsx" path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/Home/index.tsx">
-        <metrics statements="26" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="7"/>
+        <metrics statements="22" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
         <line num="11" count="4" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="4" type="stmt"/>
@@ -276,15 +276,11 @@
         <line num="47" count="36" type="stmt"/>
         <line num="48" count="36" type="cond" truecount="2" falsecount="0"/>
         <line num="51" count="4" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
         <line num="57" count="1" type="stmt"/>
         <line num="58" count="1" type="stmt"/>
         <line num="59" count="1" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
         <line num="73" count="4" type="stmt"/>
         <line num="84" count="12" type="stmt"/>
         <line num="93" count="36" type="stmt"/>

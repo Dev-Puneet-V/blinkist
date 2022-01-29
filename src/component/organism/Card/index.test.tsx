@@ -66,3 +66,18 @@ test('should render different color od card box when inLibrary is false as well 
     fireEvent.mouseEnter(linkElement);
     expect(linkElement).toHaveStyle(`background-color: ${theme.palette.primary.light}`); 
 });
+
+const libraryHandler = (a:any, b:any)=>{
+
+}
+
+test('should card-library-handler be clickable and when inLIbrary is false', () => {
+    render(router({
+        ...props,
+        inLibrary: false,
+        libraryHandler: libraryHandler
+    }));
+    const linkElement = screen.getByTestId('card-library-handler');
+    fireEvent.click(linkElement);
+    expect(linkElement).not.toBeInTheDocument(); 
+});

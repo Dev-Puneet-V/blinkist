@@ -96,6 +96,7 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minu
                     <Box onClick={e => 
                         libraryHandler(props.cardId, setBookLibraryStatus)
                     } 
+                    data-testid='card-library-handler'
                     sx={{
                         color: `${!hoverState ? '#0365F2' : 'white'}`,
                         backgroundColor: `${hoverState ? '#0365F2' : 'white'}`

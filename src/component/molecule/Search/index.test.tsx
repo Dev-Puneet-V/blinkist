@@ -24,6 +24,6 @@ test('should render filtered result of length 2 for Employee search',  async () 
     const inputElement = screen.getByPlaceholderText('Search by title or author');
     fireEvent.keyUp(inputElement as HTMLInputElement, { target: { value : 'Employee'}})
     const filteredData = screen.queryAllByTestId('result')
-    expect(filteredData.length).toBe(2);
+    expect(filteredData.length).toBe(2)
 });
 

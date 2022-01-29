@@ -81,7 +81,7 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
             <Box>
                 {
                 data.map((curr:any)=>{
-                    return <Box>
+                    return <Box data-testid='container'>
                         <Typography className={classes.heading}>
                             {curr.heading}
                         </Typography>

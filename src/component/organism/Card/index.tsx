@@ -5,7 +5,7 @@ import Typography from '../../atom/Typography';
 import ProgressBar from '../../atom/ProgressBar';
 import Icon from '../../atom/Icon';
 import AddIcon from '@mui/icons-material/Add';
-import {NavLink, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import theme from '../../../theme/mainTheme'
 import {useState} from 'react';
 

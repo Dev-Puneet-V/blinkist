@@ -3,10 +3,10 @@ import { render, screen } from '@testing-library/react';
 import MyLibrary from '.';
 import {BrowserRouter} from 'react-router-dom';
 
-const router = (prop:any)=>{
+const router = (books:any, library: any)=>{
     return (
         <BrowserRouter>
-            <MyLibrary {...prop}></Card>
+            <MyLibrary books={books} library={library} />
         </BrowserRouter>
     )
 }
@@ -21,11 +21,17 @@ describe('Library', () => {
         response = await fetch('http://localhost:3004/books');
         books = await response.json();
     })
-    // test('renders button with label', async () => {
-    //     render(<MyLibrary books={books} library={library}/>);
-    //     const linkElement = screen.getByTestId('button');
-    //     expect(linkElement.textContent).toBe('button');
-    // });
+    test('renders cicular progress bar if books are not available', async () => {
+        let books:any=[];
+        render(router(books, library));
+        const linkElement = screen.getByTestId('circular-progress');
+        expect(linkElement).toBeInTheDocument();
+    });
+    test('should not render cicular progress bar if books are available', async () => {
+        render(router(books, library));
+        const linkElement = screen.queryByTestId('circular-progress');
+        expect(linkElement).not.toBeInTheDocument();
+    });
 })
 
             

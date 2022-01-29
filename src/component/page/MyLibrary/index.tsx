@@ -15,7 +15,7 @@ const useStyle = makeStyles({
     }
 });
 
-const MyLibrary = ({books, setBooks, library, setLibrary}:any) =>{
+const MyLibrary = ({books, library}:any) =>{
     const classes = useStyle();
     let data = library;
     const tabData = [
@@ -35,8 +35,8 @@ const MyLibrary = ({books, setBooks, library, setLibrary}:any) =>{
 
     const cards = () => {
 
-        if(books.length == 0){
-            return  <CircularProgress />
+        if(books.length === 0){
+            return  <CircularProgress data-testid='circular-progress'/>
         }
         else {
             if(currState === 'reading'){

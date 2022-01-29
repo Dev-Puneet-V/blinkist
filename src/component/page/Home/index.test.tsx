@@ -2,7 +2,6 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import Home from '.';
 import {BrowserRouter} from 'react-router-dom';
-import { AnyCnameRecord } from 'dns';
 
 const setLibrary = jest.fn();
 const setData = jest.fn();
@@ -35,5 +34,16 @@ describe('Home', () => {
         render(router(data, books, library));
         const extraElement = await screen.findAllByTestId('container');
         expect(extraElement.length).toBe(data.length);
+    })
+    test('should render a circularbox if library is empty', async () => {
+        let librarys = false;
+        render(router(data, books, librarys));
+        const circularElement = await screen.findAllByTestId('circular-progress');
+        expect(circularElement.length).toBe(data.length);
+    })
+    test('clickable library handler', async () => {
+        render(router(data, books, library));
+        const linkElement = await screen.findAllByTestId('card-library-handler');
+        fireEvent.click(linkElement[0]);
     })
 });

@@ -88,7 +88,7 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
                         <Box className={classes.main}>
                             {  
                                 !library ?
-                                 <CircularProgress /> :
+                                 <CircularProgress data-testid='circular-progress'/> :
                                     curr.books.map((currData:any) => {
                                         currData = books[currData.id];
                                         const inLibrary = checkInLibrary(currData.id)

@@ -25,7 +25,6 @@ const mockCallback = jest.fn();
 it("should have green indicator color for currently reading tab by default", ()=>{
     render(<BrowserRouter><Tabs tabData={tabData} stateHandler={mockCallback }/></BrowserRouter>);
     const tabsElement = screen.getByTestId('tab-recent');
-    // fireEvent.change(tabsElement, {newValue: 'recent'});
     fireEvent.click(tabsElement);
     
 })

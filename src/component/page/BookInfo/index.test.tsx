@@ -31,6 +31,13 @@ describe('Book Info', () => {
         const linkElement = screen.queryByTestId('circular-progress');
         expect(linkElement).not.toBeInTheDocument()
     });
+    test('should render tabs with clickable option',async () => {
+        render(router(library));
+        await new Promise((r) => setTimeout(r, 2000));
+        const tabsElement = screen.getByTestId(/tab-audience/);
+        fireEvent.click(tabsElement);
+        expect(tabsElement).toHaveStyle('border-bottom-color:#2CE080')
+    });
 });
 
 jest.setTimeout(30000);

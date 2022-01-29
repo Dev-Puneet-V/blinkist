@@ -18,7 +18,6 @@ const useStyle = makeStyles({
 const MyLibrary = ({books, setBooks, library, setLibrary}:any) =>{
     const classes = useStyle();
     let data = library;
-    let setData = setLibrary;
     const tabData = [
         { 
           'value': 'reading',

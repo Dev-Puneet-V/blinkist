@@ -1,80 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Input/index.test.tsx">
-    <testCase name="should render input element" duration="177"/>
-    <testCase name="should be able to type in input" duration="37"/>
-  </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/NavIcon/index.test.tsx">
-    <testCase name="render the nav icon as well as label" duration="90"/>
-    <testCase name="Left icon" duration="18"/>
-    <testCase name="Right icon" duration="16"/>
+    <testCase name="render the nav icon as well as label" duration="131"/>
+    <testCase name="Left icon" duration="28"/>
+    <testCase name="Right icon" duration="25"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.test.tsx">
-    <testCase name="should render progressbar" duration="134"/>
-    <testCase name="should render progressbar with value" duration="32"/>
-    <testCase name="should render 0 for value undefined" duration="30"/>
+    <testCase name="should render progressbar" duration="363"/>
+    <testCase name="should render progressbar with value" duration="42"/>
+    <testCase name="should render 0 for value undefined" duration="35"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Footer/index.test.tsx">
-    <testCase name="Footer renders logo" duration="220"/>
-    <testCase name="Footer renders slogan text" duration="44"/>
-    <testCase name="Footer renders three topics" duration="39"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
-    <testCase name="should render progressbar" duration="49"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Button/index.test.tsx">
-    <testCase name="renders button with label" duration="101"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.test.tsx">
-    <testCase name="should render 2 tabw for 2 length data" duration="254"/>
-    <testCase name="should have green indicator color for currently reading tab by default" duration="101"/>
+    <testCase name="Footer renders logo" duration="647"/>
+    <testCase name="Footer renders slogan text" duration="101"/>
+    <testCase name="Footer renders three topics" duration="129"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Banner/index.test.tsx">
-    <testCase name="Banner Heading" duration="90"/>
-    <testCase name="Bannner discription" duration="26"/>
+    <testCase name="Banner Heading" duration="317"/>
+    <testCase name="Bannner discription" duration="90"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Input/index.test.tsx">
+    <testCase name="should render input element" duration="235"/>
+    <testCase name="should be able to type in input" duration="54"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.test.tsx">
+    <testCase name="should render 2 tabw for 2 length data" duration="540"/>
+    <testCase name="should have green indicator color for currently reading tab by default" duration="102"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
+    <testCase name="should render progressbar" duration="194"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Button/index.test.tsx">
+    <testCase name="renders button with label" duration="207"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Icon/index.test.tsx">
-    <testCase name="should render passed icon" duration="45"/>
+    <testCase name="should render passed icon" duration="78"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/MyLibrary/index.test.tsx">
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Logo/index.test.tsx">
-    <testCase name="Logo" duration="53"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Search/index.test.tsx">
-    <testCase name="should render input box" duration="184"/>
-    <testCase name="should render filtered result of length 2 for Employee search" duration="206"/>
+    <testCase name="Logo" duration="98"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Card/index.test.tsx">
-    <testCase name="should render same bookname text" duration="137"/>
-    <testCase name="should render same writer name text" duration="30"/>
-    <testCase name="should render same time read text" duration="22"/>
-    <testCase name="should render white background color if inLibrary is true" duration="75"/>
-    <testCase name="should render different color of card body when inLibrary is false as well as in hoveredState" duration="38"/>
-    <testCase name="should render different color od card box when inLibrary is false as well as in hoveredState" duration="34"/>
-    <testCase name="should card-library-handler be clickable and when inLIbrary is false" duration="21">
-      <failure message="Error: expect(element).not.toBeInTheDocument()"><![CDATA[Error: expect(element).not.toBeInTheDocument()
-
-expected document not to contain element, found <div class="MuiBox-root css-1ah5qgj" data-testid="card-library-handler" style="display: flex; align-items: center; justify-content: center; height: 48px; border-top: 1px solid lightGrey; border-radius: 0 0 8px 8px; width: 100%;"><div class="MuiBox-root css-old1by"><svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" data-testid="AddIcon" focusable="false" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg></div><p class="MuiTypography-root MuiTypography-body1 css-t5ymw4-MuiTypography-root">Add to library</p></div> instead
-    at Object.<anonymous> (/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Card/index.test.tsx:82:29)
-    at Promise.then.completed (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:218:40)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at _runTest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:66:9)
-    at run (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/run.js:25:3)
-    at runAndTransformResultsToJestFormat (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-    at jestAdapter (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-    at runTestInternal (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-runner/build/runTest.js:389:16)
-    at runTest (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-runner/build/runTest.js:475:34)
-    at Object.worker (/home/puneetv/Documents/web/react/Assignment/blinkist/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
-    </testCase>
+    <testCase name="should render same bookname text" duration="215"/>
+    <testCase name="should render same writer name text" duration="52"/>
+    <testCase name="should render same time read text" duration="38"/>
+    <testCase name="should render white background color if inLibrary is true" duration="135"/>
+    <testCase name="should render different color of card body when inLibrary is false as well as in hoveredState" duration="142"/>
+    <testCase name="should render different color od card box when inLibrary is false as well as in hoveredState" duration="104"/>
+    <testCase name="should card-library-handler be clickable and when inLIbrary is false" duration="33"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Search/index.test.tsx">
+    <testCase name="should render input box" duration="242"/>
+    <testCase name="should render filtered result of length 2 for Employee search" duration="518"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Explore/index.test.tsx">
-    <testCase name="Explore render Explore by category heading" duration="151"/>
-    <testCase name="Explore should recently added text to be clickable" duration="78"/>
-    <testCase name="Explore should See popular titles to be clickable" duration="78"/>
-    <testCase name="Explore Explore by category text should be blue" duration="76"/>
-    <testCase name="Explore Nav Icon count should be 26" duration="59"/>
+    <testCase name="Explore render Explore by category heading" duration="319"/>
+    <testCase name="Explore should recently added text to be clickable" duration="157"/>
+    <testCase name="Explore should See popular titles to be clickable" duration="181"/>
+    <testCase name="Explore Explore by category text should be blue" duration="182"/>
+    <testCase name="Explore Nav Icon count should be 26" duration="194"/>
   </file>
 </testExecutions>

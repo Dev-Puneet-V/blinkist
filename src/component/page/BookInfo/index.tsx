@@ -1,7 +1,7 @@
 import {Container, Box} from '@mui/material';
 import Typography from '../../atom/Typography';
 import Icon from '../../atom/Icon';
-import {AccessAlarm, ArrowForward, LibraryAddTwoTone} from '@mui/icons-material';
+import {AccessAlarm, ArrowForward} from '@mui/icons-material';
 import Button from '../../atom/Button';
 import Image from '../../atom/Image';
 import Tab from '../../molecule/tabs';
@@ -115,8 +115,8 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
     useEffect(() =>{
         const processor = async (bookId: any) => {
             let response = await fetch(`http://localhost:3004/books/${bookId}`);
-            const bookData = await response.json();
-            setBookData(bookData);
+            const book_data = await response.json();
+            setBookData(book_data);
         }
         checkInLibrary();
         processor(bookId);
@@ -165,7 +165,7 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
     return(
         !bookData 
                 ?
-        <CircularProgress />
+        <CircularProgress data-testid='circular-progress'/>
             :
         <Container>
             <Typography className={classes.topHeading}>

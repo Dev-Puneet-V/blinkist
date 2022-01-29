@@ -49,7 +49,6 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
     }
 
     const libraryHandler = async (bookId:any, setBookStatus:any) => {
-        // try {
             library.currentlyReading.push({
                 "id" : bookId,
                 "progress" : 0
@@ -64,11 +63,6 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
               }
             });
             return await res.json();
-        //   } catch (err) {
-        //         setBookStatus(false);
-        //         setLibrary(library.currentlyReading.filter((currData:any) => currData.id !== bookId));
-        //         return err;
-        //   }
     }
     return (
         <Container>

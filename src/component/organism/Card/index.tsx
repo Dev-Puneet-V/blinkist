@@ -6,7 +6,6 @@ import ProgressBar from '../../atom/ProgressBar';
 import Icon from '../../atom/Icon';
 import AddIcon from '@mui/icons-material/Add';
 import {NavLink, Link} from 'react-router-dom';
-import { makeStyles } from '@mui/styles';
 import theme from '../../../theme/mainTheme'
 import {useState} from 'react';
 
@@ -59,7 +58,7 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minu
         setHoverState(!hoverState)
     }
     return(
-        <Paper elevation={1} sx={{
+        <Paper data-testid='card-body' elevation={1} sx={{
                 width: `${width}px`,
                 backgroundColor: `${!inLibrary && hoverState ? theme.palette.primary.light : 'white'}`
             }}

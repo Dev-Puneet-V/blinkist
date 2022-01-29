@@ -161,12 +161,7 @@
 <a name='L96'></a><a href='#L96'>96</a>
 <a name='L97'></a><a href='#L97'>97</a>
 <a name='L98'></a><a href='#L98'>98</a>
-<a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L99'></a><a href='#L99'>99</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,9 +196,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,8 +209,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -300,32 +290,27 @@ const HeaderComponent = <span class="cstat-no" title="statement not covered" ><s
                 &lt;NavLink to='/' style={{ textDecoration: 'none' }}&gt;
                     &lt;Logo {...props} /&gt;
                 &lt;/NavLink&gt;
-&nbsp;
-                        
-&nbsp;
                     {
                         searchState
                         ?
                         &lt;SearchBox books={props.books} searchStateHandler={<span class="fstat-no" title="function not covered" >()</span> =&gt;{
 <span class="cstat-no" title="statement not covered" >                            setSearchState(false)</span>
 <span class="cstat-no" title="statement not covered" >                            props.setBlankStatus(false)</span>
-                         } } /&gt; 
+                         } } data-testid='search-box'/&gt; 
                         :
-                        &lt;Box sx={{flexGrow: 1}}&gt;
+                        &lt;Box sx={{flexGrow: 1}} data-testid='nav'&gt;
                             &lt;Button onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >                                setSearchState(true)</span>
 <span class="cstat-no" title="statement not covered" >                                props.setBlankStatus(true)</span>
-                            }} size='large' key={0} startIcon={&lt;Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/&gt;} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/&gt;
+                            }} size='large' data-testid='search-state-button' key={0} startIcon={&lt;Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/&gt;} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/&gt;
                             &lt;Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}&gt;
                                 &lt;Button onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >                                    setSearchState(true)</span>
 <span class="cstat-no" title="statement not covered" >                                    props.setBlankStatus(true)</span>
                                 }} size='large' key={0} startIcon={&lt;Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/&gt;} sx={{color:'black', margin: '0px 5px 0px 40px'}}/&gt;
 &nbsp;
-                                {/* &lt;NavLink to='/' style={{ textDecoration: 'none' }}&gt; */}
-                                {/* onMouseLeave={props.handleExploreMenu} */}
                                 &lt;Button onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? &lt;KeyboardArrowUp /&gt; : &lt;KeyboardArrowDown /&gt;} /&gt;
-                                {/* &lt;/NavLink&gt; */}
+                               
                                 &lt;NavLink to='/library' style={{ textDecoration: 'none', }}&gt;
                                     &lt;Button size='medium' key={2} label='My Library' sx={{color:'black', margin: '5px 10px'}}/&gt;
                                 &lt;/NavLink&gt;
@@ -335,7 +320,7 @@ const HeaderComponent = <span class="cstat-no" title="statement not covered" ><s
                     &lt;Box sx={{ flexGrow: 0 }}&gt;
                         &lt;Tooltip title="Open settings"&gt;
                         &lt;Button onClick={handleOpenUserMenu} size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Account' endIcon={anchorElUser ? &lt;KeyboardArrowUp /&gt; : &lt;KeyboardArrowDown /&gt;} /&gt;
-                            {/* &lt;Image src='/assets/book.png' height={50} onClick={handleOpenUserMenu} sx={{ p: 0, borderRadius: '50%' }} /&gt; */}
+                           
                         &lt;/Tooltip&gt;
                         &lt;Menu
                             sx={{ mt: '45px' }}
@@ -379,7 +364,7 @@ export default HeaderComponent;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Jan 28 2022 17:51:20 GMT+0530 (India Standard Time)
+                at Sat Jan 29 2022 11:21:49 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

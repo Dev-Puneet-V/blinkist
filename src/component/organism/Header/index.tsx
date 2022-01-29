@@ -29,32 +29,27 @@ const HeaderComponent = (props : any) => {
                 <NavLink to='/' style={{ textDecoration: 'none' }}>
                     <Logo {...props} />
                 </NavLink>
-
-                        
-
                     {
                         searchState
                         ?
                         <SearchBox books={props.books} searchStateHandler={() =>{
                             setSearchState(false)
                             props.setBlankStatus(false)
-                         } } /> 
+                         } } data-testid='search-box'/> 
                         :
-                        <Box sx={{flexGrow: 1}}>
+                        <Box sx={{flexGrow: 1}} data-testid='nav'>
                             <Button onClick={() => {
                                 setSearchState(true)
                                 props.setBlankStatus(true)
-                            }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/>
+                            }} size='large' data-testid='search-state-button' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px', display: {md: 'none'}}}/>
                             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                                 <Button onClick={() => {
                                     setSearchState(true)
                                     props.setBlankStatus(true)
                                 }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px'}}/>
 
-                                {/* <NavLink to='/' style={{ textDecoration: 'none' }}> */}
-                                {/* onMouseLeave={props.handleExploreMenu} */}
                                 <Button onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
-                                {/* </NavLink> */}
+                               
                                 <NavLink to='/library' style={{ textDecoration: 'none', }}>
                                     <Button size='medium' key={2} label='My Library' sx={{color:'black', margin: '5px 10px'}}/>
                                 </NavLink>
@@ -64,7 +59,7 @@ const HeaderComponent = (props : any) => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                         <Button onClick={handleOpenUserMenu} size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Account' endIcon={anchorElUser ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
-                            {/* <Image src='/assets/book.png' height={50} onClick={handleOpenUserMenu} sx={{ p: 0, borderRadius: '50%' }} /> */}
+                           
                         </Tooltip>
                         <Menu
                             sx={{ mt: '45px' }}

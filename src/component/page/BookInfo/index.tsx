@@ -112,7 +112,7 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
         setcurrentlyReadingStatus(false);
     }
     useEffect(() =>{
-        const processor = async (bookId: any) => {
+        const processor = async (id: any) => {
             let response = await fetch(`http://localhost:3004/books/${bookId}`);
             const book_data = await response.json();
             setBookData(book_data);

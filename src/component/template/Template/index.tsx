@@ -22,14 +22,14 @@ const TemplateComponent = () => {
     useEffect(() => {
         const processor = async () => {
             let response = await fetch('http://localhost:3004/extra');
-            let data = await response.json();
-            setData(data); 
+            let rData = await response.json();
+            setData(rData); 
             response = await fetch('http://localhost:3004/library');
-            let library = await response.json();
-            setLibrary(library);
+            let rLibrary = await response.json();
+            setLibrary(rLibrary);
             response = await fetch('http://localhost:3004/books');
-            let books = await response.json();
-            setBooks(books);
+            let rBooks = await response.json();
+            setBooks(rBooks);
         };
         processor();
     }, []);

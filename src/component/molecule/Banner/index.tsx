@@ -1,6 +1,6 @@
 import Image from '../../atom/Image';
 import Typography from '../../atom/Typography';
-import {Box, Card} from '@mui/material';
+import {Box} from '@mui/material';
 
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((themes)=>({

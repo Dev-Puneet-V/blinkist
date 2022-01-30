@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Container, Box} from '@mui/material';
 import Typography from '../../atom/Typography';
-import baseTheme from '../../../theme/baseTheme';
+import baseTheme from '../../../theme/buttonTheme';
 import Tab from '../../molecule/tabs';
 import Card from '../../organism/Card';
 import CircularProgress from '@mui/material/CircularProgress';

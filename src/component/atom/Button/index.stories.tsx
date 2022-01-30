@@ -1,7 +1,7 @@
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import { ThemeProvider } from '@mui/material/styles';
 import Button from ".";
-import baseTheme from '../../../theme/baseTheme';
+import baseTheme from '../../../theme/buttonTheme';
 const ButtonComponent = {
   title: "atom/Button",
   component: Button,

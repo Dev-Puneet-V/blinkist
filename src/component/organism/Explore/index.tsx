@@ -1,7 +1,6 @@
 import {Container, Box} from '@mui/material';
 import Typography from '../../atom/Typography';
 import {Link} from 'react-router-dom';
-import {useState} from 'react';
 import NavIcon from '../../molecule/NavIcon';
 import theme from '../../../theme/mainTheme'
 import { makeStyles as makeStyle } from '@mui/styles';
@@ -60,20 +59,7 @@ const useStyle = makeStyle({
 const ExploreComponent = ()=>{
     const classes = useStyle();
     const allClass = useStyles();
-    const tabData = [
-        { 
-          'value': 'category',
-          'label': 'Explore by category',
-        },
-        { 
-          'value': 'recent',
-          'label': 'See recently added titles'
-        },
-        { 
-            'value': 'popular',
-            'label': 'See popular titles'
-          }
-    ]
+    
     const data =[
         {
             'leftIcon': <RocketLaunchOutlined />,

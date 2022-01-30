@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import baseTheme from '../../../theme/baseTheme';
+import baseTheme from '../../../theme/buttonTheme';
 const TypographyComponent = ({theme, ...props}: any) =>{
   return(
     <ThemeProvider theme={baseTheme} >

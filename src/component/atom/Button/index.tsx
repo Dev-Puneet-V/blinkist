@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import baseTheme from '../../../theme/baseTheme';
+import baseTheme from '../../../theme/buttonTheme';
 import { ThemeProvider } from '@mui/material/styles';
 const ButtonComponent = (props: any) =>{
   return(

@@ -29,9 +29,9 @@ describe('Header', () => {
         response = await fetch('http://localhost:3004/books');
         books = await response.json();
     })
-    test('search-state-button button should be clickable', () => {
+    test('search-state-button button should be clickable', async () => {
         render(router(books));
-        const searchButtonElement = screen.getByTestId('box');
+        const searchButtonElement = await screen.findByTestId('box');
     });
 
 });

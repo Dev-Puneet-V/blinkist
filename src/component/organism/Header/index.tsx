@@ -8,8 +8,10 @@ import Button from '../../atom/Button';
 import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import SearchBox from '../../molecule/Search';
+import { useAuth0 } from "@auth0/auth0-react";
 const HeaderComponent = (props : any) => {
-    const settings = ['Profile', 'Logout'];
+    const { logout } = useAuth0();
+    const settings = ['Logout'];
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
     const [searchState, setSearchState] = useState(false);
@@ -84,7 +86,7 @@ const HeaderComponent = (props : any) => {
                         </MenuItem>
                         {settings.map((setting) => (
                             <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                            <Typography textAlign="center">{setting}</Typography>
+                            <Typography textAlign="center" onClick={() => logout({ returnTo: window.location.origin })}>{setting}</Typography>
                             </MenuItem>
                         ))}
                             

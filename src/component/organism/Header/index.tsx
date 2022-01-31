@@ -22,7 +22,7 @@ const HeaderComponent = (props : any) => {
     };
     return (
         <AppBar position="fixed" sx={{color: 'black', backgroundColor: 'white', boxShadow: 'none'}} data-testid='box'>
-            <Container>
+            <Container data-testid='box-a'>
                 <Toolbar sx={{height: '86px',  display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
                 <NavLink to='/' style={{ textDecoration: 'none' }}>
                     <Logo {...props} />
@@ -30,10 +30,10 @@ const HeaderComponent = (props : any) => {
                     {
                         searchState
                         ?
-                        <SearchBox books={props.books} searchStateHandler={() =>{
+                        <SearchBox data-testid='search-box' books={props.books} searchStateHandler={() =>{
                             setSearchState(false)
                             props.setBlankStatus(false)
-                         } } data-testid='search-box'/> 
+                         } } /> 
                         :
                         <Box sx={{flexGrow: 1}} data-testid='nav'>
                             <Button data-testid='search-state-button' onClick={() => {

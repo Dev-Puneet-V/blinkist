@@ -41,7 +41,7 @@ const TemplateComponent = () => {
             <CircularProgress data-testid='circular-progress'/> 
         </Container>
         :
-        <Box sx={{position: 'relative', height: '100vh'}}>
+        <Box sx={{position: 'relative', height: '100vh'}} data-testid='main'>
             <Router>
                 <Header 
                     url= '/assets/logo.png'

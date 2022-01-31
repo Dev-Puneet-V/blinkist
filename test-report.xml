@@ -1,89 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Search/index.test.tsx">
-    <testCase name="should render input box" duration="220"/>
-    <testCase name="should render filtered result of length 2 for Employee search" duration="356"/>
+    <testCase name="should render input box" duration="231"/>
+    <testCase name="should render filtered result of length 2 for Employee search" duration="305"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Card/index.test.tsx">
-    <testCase name="should render same bookname text" duration="187"/>
-    <testCase name="should render same writer name text" duration="46"/>
-    <testCase name="should render same time read text" duration="51"/>
-    <testCase name="should render white background color if inLibrary is true" duration="122"/>
-    <testCase name="should render different color of card body when inLibrary is false as well as in hoveredState" duration="156"/>
-    <testCase name="should render different color od card box when inLibrary is false as well as in hoveredState" duration="83"/>
-    <testCase name="should card-library-handler be clickable and when inLIbrary is false" duration="60"/>
+    <testCase name="should render same bookname text" duration="241"/>
+    <testCase name="should render same writer name text" duration="37"/>
+    <testCase name="should render same time read text" duration="45"/>
+    <testCase name="should render white background color if inLibrary is true" duration="130"/>
+    <testCase name="should render different color of card body when inLibrary is false as well as in hoveredState" duration="89"/>
+    <testCase name="should render different color od card box when inLibrary is false as well as in hoveredState" duration="65"/>
+    <testCase name="should card-library-handler be clickable and when inLIbrary is false" duration="31"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Header/index.test.tsx">
-    <testCase name="Header search-state-button button should be clickable" duration="1296"/>
+    <testCase name="Header search-state-button button should be clickable" duration="1000"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Explore/index.test.tsx">
-    <testCase name="Explore render Explore by category heading" duration="455"/>
-    <testCase name="Explore should recently added text to be clickable" duration="241"/>
-    <testCase name="Explore should See popular titles to be clickable" duration="169"/>
+    <testCase name="Explore render Explore by category heading" duration="425"/>
+    <testCase name="Explore should recently added text to be clickable" duration="221"/>
+    <testCase name="Explore should See popular titles to be clickable" duration="175"/>
     <testCase name="Explore Explore by category text should be blue" duration="232"/>
-    <testCase name="Explore Nav Icon count should be 26" duration="178"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/MyLibrary/index.test.tsx">
-    <testCase name="Library renders cicular progress bar if books are not available" duration="554"/>
-    <testCase name="Library should not render cicular progress bar if books are available" duration="238"/>
-    <testCase name="Library should render same no of finished books" duration="656"/>
-    <testCase name="Library should render same no of currently books" duration="316"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Footer/index.test.tsx">
-    <testCase name="Footer renders logo" duration="215"/>
-    <testCase name="Footer renders slogan text" duration="72"/>
-    <testCase name="Footer renders three topics" duration="46"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/template/Template/index.test.tsx">
-    <testCase name="Template should render circular bar if data is empty" duration="145"/>
+    <testCase name="Explore Nav Icon count should be 26" duration="211"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/Home/index.test.tsx">
-    <testCase name="Home should render input" duration="898"/>
-    <testCase name="Home should render containers matching to data length" duration="427"/>
-    <testCase name="Home should render a circularbox if library is empty" duration="119"/>
-    <testCase name="Home clickable library handler" duration="511"/>
+    <testCase name="Home should render input" duration="777"/>
+    <testCase name="Home should render containers matching to data length" duration="410"/>
+    <testCase name="Home should render a circularbox if library is empty" duration="89"/>
+    <testCase name="Home clickable library handler" duration="401"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/MyLibrary/index.test.tsx">
+    <testCase name="Library renders cicular progress bar if books are not available" duration="516"/>
+    <testCase name="Library should not render cicular progress bar if books are available" duration="318"/>
+    <testCase name="Library should render same no of finished books" duration="551"/>
+    <testCase name="Library should render same no of currently books" duration="275"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/organism/Footer/index.test.tsx">
+    <testCase name="Footer renders logo" duration="243"/>
+    <testCase name="Footer renders slogan text" duration="58"/>
+    <testCase name="Footer renders three topics" duration="45"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Banner/index.test.tsx">
-    <testCase name="Banner Heading" duration="134"/>
-    <testCase name="Bannner discription" duration="34"/>
+    <testCase name="Banner Heading" duration="90"/>
+    <testCase name="Bannner discription" duration="38"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/ProgressBar/index.test.tsx">
-    <testCase name="should render progressbar" duration="201"/>
-    <testCase name="should render progressbar with value" duration="38"/>
-    <testCase name="should render 0 for value undefined" duration="31"/>
+    <testCase name="should render progressbar" duration="145"/>
+    <testCase name="should render progressbar with value" duration="27"/>
+    <testCase name="should render 0 for value undefined" duration="26"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Input/index.test.tsx">
-    <testCase name="should render input element" duration="176"/>
-    <testCase name="should be able to type in input" duration="55"/>
+    <testCase name="should render input element" duration="118"/>
+    <testCase name="should be able to type in input" duration="31"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Blank/index.test.tsx">
-    <testCase name="renders button with label" duration="87"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
-    <testCase name="should render progressbar" duration="69"/>
+    <testCase name="renders button with label" duration="92"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/Logo/index.test.tsx">
-    <testCase name="Logo" duration="89"/>
+    <testCase name="Logo" duration="59"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Button/index.test.tsx">
-    <testCase name="renders button with label" duration="129"/>
-  </file>
-  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Icon/index.test.tsx">
-    <testCase name="should render passed icon" duration="86"/>
+    <testCase name="renders button with label" duration="97"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/tabs/index.test.tsx">
-    <testCase name="should render 2 tabw for 2 length data" duration="201"/>
-    <testCase name="should have green indicator color for currently reading tab by default" duration="55"/>
+    <testCase name="should render 2 tabw for 2 length data" duration="185"/>
+    <testCase name="should have green indicator color for currently reading tab by default" duration="53"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Typography/index.test.tsx">
+    <testCase name="should render progressbar" duration="44"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/molecule/NavIcon/index.test.tsx">
-    <testCase name="render the nav icon as well as label" duration="53"/>
-    <testCase name="Left icon" duration="17"/>
-    <testCase name="Right icon" duration="15"/>
+    <testCase name="render the nav icon as well as label" duration="44"/>
+    <testCase name="Left icon" duration="11"/>
+    <testCase name="Right icon" duration="11"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/atom/Icon/index.test.tsx">
+    <testCase name="should render passed icon" duration="76"/>
+  </file>
+  <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/template/Template/index.test.tsx">
+    <testCase name="Template should render circular bar if data is empty" duration="102"/>
+    <testCase name="Template should not render circular bar if data is not empty" duration="5041"/>
   </file>
   <file path="/home/puneetv/Documents/web/react/Assignment/blinkist/src/component/page/BookInfo/index.test.tsx">
-    <testCase name="Book Info should render circular bar if data is empty" duration="102"/>
-    <testCase name="Book Info should not render circular bar if data is not empty" duration="2036"/>
-    <testCase name="Book Info should render tabs with clickable option" duration="2127"/>
-    <testCase name="Book Info should render third tab with clickable option" duration="2093"/>
+    <testCase name="Book Info should render circular bar if data is empty" duration="81"/>
+    <testCase name="Book Info should not render circular bar if data is not empty" duration="2035"/>
+    <testCase name="Book Info should render tabs with clickable option" duration="2242"/>
+    <testCase name="Book Info should render third tab with clickable option" duration="2140"/>
   </file>
 </testExecutions>

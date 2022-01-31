@@ -14,8 +14,8 @@ const router = (books:any)=>{
                     url= '/assets/logo.png'
                     name= 'Blinkist'
                     handleExploreMenu={handleExploreMenu}
-                    exploreOption={exploreOption}
-                    blankStatus={blankStatus}
+                    exploreOption={true}
+                    blankStatus={true}
                     setBlankStatus={setBlankStatus}
                     books={books}
                 />
@@ -31,8 +31,10 @@ describe('Header', () => {
     })
     test('search-state-button button should be clickable', async () => {
         render(router(books));
-        const searchButtonElement = screen.queryByTestId('box');
-        // fireEvent.click(searchButtonElement);
+        const searchButtonElement = screen.getByTestId('search-box');
+        fireEvent.click(searchButtonElement);
+        // const searchButton = screen.getByTestId('nav');
+        expect(searchButtonElement).not.toBeInTheDocument()
     });
 
 });

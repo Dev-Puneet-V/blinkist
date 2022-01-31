@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.54% </span>
+                <span class="strong">90.9% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/22</span>
+                <span class='fraction'>20/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/9</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.54% </span>
+                <span class="strong">90.9% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/22</span>
+                <span class='fraction'>20/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -162,31 +162,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,26 +261,26 @@ const TemplateComponent = () =&gt; {
     useEffect(() =&gt; {
         const processor = async () =&gt; {
             let response = await fetch('http://localhost:3004/extra');
-            let rData = <span class="cstat-no" title="statement not covered" >await response.json();</span>
-<span class="cstat-no" title="statement not covered" >            setData(rData); </span>
-<span class="cstat-no" title="statement not covered" >            response = await fetch('http://localhost:3004/library');</span>
-            let rLibrary = <span class="cstat-no" title="statement not covered" >await response.json();</span>
-<span class="cstat-no" title="statement not covered" >            setLibrary(rLibrary);</span>
-<span class="cstat-no" title="statement not covered" >            response = await fetch('http://localhost:3004/books');</span>
-            let rBooks = <span class="cstat-no" title="statement not covered" >await response.json();</span>
-<span class="cstat-no" title="statement not covered" >            setBooks(rBooks);</span>
+            let rData = await response.json();
+            setData(rData); 
+            response = await fetch('http://localhost:3004/library');
+            let rLibrary = await response.json();
+            setLibrary(rLibrary);
+            response = await fetch('http://localhost:3004/books');
+            let rBooks = await response.json();
+            setBooks(rBooks);
         };
         processor();
     }, []);
 &nbsp;
     return (
-        (!data || <span class="branch-1 cbranch-no" title="branch not covered" >!library </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >!books) </span>
+        (!data || !library || !books) 
         ?
         &lt;Container sx={{display: 'flex', justifyContent:'center', alignItems: 'center', height: '100vh'}}&gt;
             &lt;CircularProgress data-testid='circular-progress'/&gt; 
         &lt;/Container&gt;
         :
-<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;Box sx={{position: 'relative', height: '100vh'}}&gt;</span>
+        &lt;Box sx={{position: 'relative', height: '100vh'}} data-testid='main'&gt;
             &lt;Router&gt;
                 &lt;Header 
                     url= '/assets/logo.png'
@@ -315,11 +315,11 @@ const TemplateComponent = () =&gt; {
                         padding: '24px 0px',
                         marginTop: '24px'
                     }} /&gt;
-                    {exploreOption &amp;&amp; &lt;Explore data-testid='explore-box'/&gt;}
+                    {exploreOption &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Explore data-testid='explore-box'/&gt;}</span>
                     
                 &lt;/Box&gt;
             &lt;/Router&gt;
-            {blankStatus &amp;&amp; &lt;Blank /&gt;}
+            {blankStatus &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Blank /&gt;}</span>
         &lt;/Box&gt;
     )
 }
@@ -331,7 +331,7 @@ export default TemplateComponent;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Jan 31 2022 23:34:55 GMT+0530 (India Standard Time)
+                at Mon Jan 31 2022 23:41:37 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

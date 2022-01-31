@@ -5,9 +5,9 @@ import {BrowserRouter} from 'react-router-dom';
 
 const router = ()=>{
     return (
-        <BrowserRouter>
+        // <BrowserRouter>
             <Template />
-        </BrowserRouter>
+        // </BrowserRouter>
     )
 }
 
@@ -29,19 +29,19 @@ describe('Template', () => {
         expect(linkElement).toBeInTheDocument()
     });
     
-    // test('should not render circular bar if data is not empty', async () => {
-    //     render(router());
-    //     await new Promise((r) => setTimeout(r, 4000));
-    //     const linkElement = screen.queryByTestId('circular-progress');
-    //     expect(linkElement).not.toBeInTheDocument()
-    // });
-    // test('handle-explore button should be clickable', () => {
-    //     render(router());
-    //     const linkElement = screen.getByTestId('handle-explore');
-    //     fireEvent.click(linkElement);
-    //     const exploreBoxElement = screen.queryByTestId('explore-box');
-    //     expect(exploreBoxElement).toBeInTheDocument()
-    // });
+    test('should not render circular bar if data is not empty', async () => {
+        render(router());
+        await new Promise((r) => setTimeout(r, 5000));
+        const linkElement = screen.queryByTestId('main');
+        expect(linkElement).toBeInTheDocument()
+    });
+    test('handle-explore button should be clickable', () => {
+        render(router());
+        // const linkElement = screen.getByTestId('handle-explore');
+        // fireEvent.click(linkElement);
+        // const exploreBoxElement = screen.queryByTestId('explore-box');
+        // expect(exploreBoxElement).toBeInTheDocument()
+    });
 });
 
 jest.setTimeout(30000);

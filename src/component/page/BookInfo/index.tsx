@@ -195,10 +195,9 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
                     <Box className={classes.clickables}>
                         <Button label='Read now' size='medium' variant='outlined' color='success' className={classes.statusBox}/>
                         {currentlyReadingStatus 
-                            ?
+                            &&
                             <Button data-testid='status-handler' label= 'Finished Reading' size='medium' variant='contained' color='success' onClick={libraryStatusHandler} classesName={classes.status}/>
-                            :
-                            ''
+                            
                         }
                         <Button label='Send to Kindle' size='medium' className={classes.forward} endIcon={<ArrowForward />}/>
                     </Box>

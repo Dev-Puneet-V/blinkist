@@ -76,11 +76,11 @@ const TemplateComponent = () => {
                         padding: '24px 0px',
                         marginTop: '24px'
                     }} />
-                    {exploreOption ? <Explore data-testid='explore-box'/> : ''}
+                    {exploreOption && <Explore data-testid='explore-box'/>}
                     
                 </Box>
             </Router>
-            {blankStatus ? <Blank /> : '' }
+            {blankStatus && <Blank />}
         </Box>
     )
 }

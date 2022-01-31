@@ -12,14 +12,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 const HeaderComponent = (props : any) => {
     const { logout } = useAuth0();
     const settings = ['Logout'];
-    const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
     const [searchState, setSearchState] = useState(false);
     const handleOpenUserMenu = (event: any) => {
         setAnchorElUser(event.currentTarget);
-    };
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
     };
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
@@ -50,7 +46,7 @@ const HeaderComponent = (props : any) => {
                                     props.setBlankStatus(true)
                                 }} size='large' key={0} startIcon={<Search fontSize='large' style={{textDecoration: 'none', fontSize: '30px'}}/>} sx={{color:'black', margin: '0px 5px 0px 40px'}}/>
 
-                                <Button data-testid='handle-explore' onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={!props.exploreOption ? <KeyboardArrowUp /> : <KeyboardArrowDown />} />
+                                <Button data-testid='handle-explore' onClick={props.handleExploreMenu}  size='medium' key={1} sx={{display: 'flex', alignItems: 'center', color:'black', margin: '5px 10px'}} label='Explore' endIcon={(!props.exploreOption && <KeyboardArrowUp />) || (props.exploreOption && <KeyboardArrowDown />)} />
                                
                                 <NavLink to='/library' style={{ textDecoration: 'none', }}>
                                     <Button size='medium' key={2} label='My Library' sx={{color:'black', margin: '5px 10px'}}/>
@@ -79,13 +75,13 @@ const HeaderComponent = (props : any) => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                        <MenuItem key={5} onClick={handleCloseNavMenu} sx={{display: {md : 'none'}}}>
+                        <MenuItem key={5}  sx={{display: {md : 'none'}}}>
                             <NavLink to='/library' style={{ textDecoration: 'none', color: 'black'}}>
                                 <Typography textAlign="center">My Library</Typography>
                             </NavLink>
                         </MenuItem>
                         {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCloseNavMenu}>
+                            <MenuItem key={setting} >
                             <Typography textAlign="center" onClick={() => logout({ returnTo: window.location.origin })}>{setting}</Typography>
                             </MenuItem>
                         ))}

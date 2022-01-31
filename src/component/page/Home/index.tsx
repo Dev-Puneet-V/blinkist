@@ -62,7 +62,7 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
                 "Content-Type": "application/json"
               }
             });
-            return await res.json();
+            return res.json();
     }
     return (
         <Container>

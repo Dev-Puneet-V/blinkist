@@ -1,5 +1,14 @@
-{
-  "books": [
+import {ComponentMeta, ComponentStory} from '@storybook/react';
+import Library from '.';
+import {BrowserRouter as Router} from 'react-router-dom';
+import {ThemeProvider} from '@mui/material';
+import theme from '../../../theme/mainTheme';
+const LibraryComponent = {
+    title : 'Page/Library',
+    component: Library
+} as ComponentMeta<typeof Library>;
+
+let books = [
     {
       "id": 0,
       "name": "Bring Your Human to Work",
@@ -132,48 +141,10 @@
       "about_author": "From Jim Collins, the most influential business thinker of our era, comes an ambitious upgrade of his classic, Beyond Entrepreneurship, that includes all-new findings and world-changing insights.",
       "aim": "Turning Your Business into an Enduring Great Company"
     }
-  ],
-  "library": {
-    "currentlyReading": [
-      {
-        "id": 11,
-        "progress": 65
-      },
-      {
-        "id": 4,
-        "progress": 90
-      },
-      {
-        "id": 3,
-        "progress": 0
-      },
-      {
-        "id": 2,
-        "progress": 0
-      }
-    ],
-    "finishedBook": [
-      {
-        "id": 9
-      },
-      {
-        "id": 6
-      },
-      {
-        "id": 10
-      },
-      {
-        "id": 8
-      },
-      {
-        "id": 1
-      },
-      {
-        "id": 0
-      }
-    ]
-  },
-  "extra": [
+  ]
+
+let setBooks= () =>{};
+let data= [
     {
       "heading": "Trending blinks",
       "books": [
@@ -225,5 +196,66 @@
         }
       ]
     }
-  ]
+  ];
+let setData=()=>{};
+let library={
+    "currentlyReading": [
+      {
+        "id": 0,
+        "progress": 65
+      },
+      {
+        "id": 4,
+        "progress": 90
+      },
+      {
+        "id": 3,
+        "progress": 0
+      },
+      {
+        "id": 2,
+        "progress": 0
+      }
+    ],
+    "finishedBook": [
+      {
+        "id": 9
+      },
+      {
+        "id": 6
+      },
+      {
+        "id": 10
+      },
+      {
+        "id": 8
+      },
+      {
+        "id": 1
+      },
+      {
+        "id": 0
+      }
+    ]
+  };
+let setLibrary=()=>{};
+export const Template: ComponentStory<typeof Library>  = (args:any) => {
+    return (
+        <ThemeProvider theme={theme}>
+            <Router>
+                <Library {...args} />
+            </Router>
+        </ThemeProvider>
+    )
 }
+Template.args = {
+    "books": books,
+    "setBooks": setBooks,
+    "data": data,
+    "setData": setData,
+    "library": library,
+    "setLibrary": setLibrary
+}
+
+
+export default LibraryComponent;

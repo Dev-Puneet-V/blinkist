@@ -78,10 +78,10 @@ const useStyles = makeStyles((themes) => ({
     },
 }));
 
-const BookInfoComponent = ({library, setLibrary}:any)=>{
+const BookInfoComponent = ({library, setLibrary, id}:any)=>{
     const classes = useStyle();
     const allClass = useStyles();
-    const { bookId } = useParams();
+    let { bookId } = useParams();
     const tabData = [
         { 
           'value': 'synopsis',
@@ -96,6 +96,9 @@ const BookInfoComponent = ({library, setLibrary}:any)=>{
             'label': 'About the author'
         }
     ]
+    if(id){
+        bookId = id;
+    }
     const [currState, setCurrState] = useState(tabData[0].value);
     const [bookData, setBookData] = useState<any>(null);
     const [currentlyReadingStatus, setcurrentlyReadingStatus] = useState<boolean>(true);

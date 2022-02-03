@@ -1,6 +1,6 @@
 import Template from './component/template/Template';
-import theme from './theme/mainTheme';
 import {ThemeProvider, CssBaseline} from '@mui/material';
+import theme from './theme/mainTheme';
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from './component/atom/Button';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -24,7 +24,6 @@ const App = () => {
 
       {isAuthenticated && <Template />}
     </ThemeProvider>
-    // testing sonarcloud 
   );
 }
 

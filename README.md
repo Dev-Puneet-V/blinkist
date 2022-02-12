@@ -6,14 +6,14 @@ This is a clone of [https://www.blinkist.com/](https://www.blinkist.com/en/nc/li
 
 ## Technologies
 ***
-* [React - Create React App]
-* [Json-Server]
-* [Typescript]
-* [Storybook]
-* [React Testing library]
-* [Sonar Cloud - test coverage > 85%]
-* [Auth0]
-* [Material UI]
+* React - Create React App
+* Json-Server
+* Typescript
+* Storybook
+* React Testing library
+* Sonar Cloud - test coverage > 85%
+* Auth0]
+* Material UI
 
 
 

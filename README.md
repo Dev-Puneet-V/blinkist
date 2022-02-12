@@ -19,9 +19,9 @@ This is a clone of [https://www.blinkist.com/](https://www.blinkist.com/en/nc/li
 
 ## Links
 ***
-[Website Link](https://blinkist-clone.herokuapp.com/)
-[SonarCloud Coverage report][https://sonarcloud.io/component_measures?id=Puneet-iner_blinkist&metric=coverage&view=list]
-[Json Server](https://blinkist-json.herokuapp.com/)
+* [Website Link](https://blinkist-clone.herokuapp.com/)
+* [SonarCloud Coverage report](https://sonarcloud.io/component_measures?id=Puneet-iner_blinkist&metric=coverage&view=list)
+* [Json Server](https://blinkist-json.herokuapp.com/)
 
 
 

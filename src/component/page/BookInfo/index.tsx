@@ -116,7 +116,7 @@ const BookInfoComponent = ({library, setLibrary, id}:any)=>{
     }
     useEffect(() =>{
         const processor = async (id: any) => {
-            let response = await fetch(`https://jsonkeeper.com/b/27LA/books/${bookId}`);
+            let response = await fetch(`https://blinkist-json.herokuapp.com/${bookId}`);
             const book_data = await response.json();
             setBookData(book_data);
         }
@@ -130,7 +130,7 @@ const BookInfoComponent = ({library, setLibrary, id}:any)=>{
             library.currentlyReading.splice(index, 1);
             library.finishedBook.push({"id" : currData.id});
             setLibrary(library);
-            let res = await  fetch("https://jsonkeeper.com/b/27LA/library/", {
+            let res = await  fetch("https://blinkist-json.herokuapp.com/library/", {
                 method: "PUT",
                 body: JSON.stringify(library),
                 headers: {

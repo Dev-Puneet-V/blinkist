@@ -116,7 +116,7 @@ const BookInfoComponent = ({library, setLibrary, id}:any)=>{
     }
     useEffect(() =>{
         const processor = async (id: any) => {
-            let response = await fetch(`https://blinkist-json.herokuapp.com/${bookId}`);
+            let response = await fetch(`https://blinkist-json.herokuapp.com/books/${bookId}`);
             const book_data = await response.json();
             setBookData(book_data);
         }

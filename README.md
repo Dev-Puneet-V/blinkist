@@ -12,7 +12,7 @@ This is a clone of [https://www.blinkist.com/](https://www.blinkist.com/en/nc/li
 * Storybook
 * React Testing library
 * Sonar Cloud - test coverage > 85%
-* Auth0]
+* Auth0
 * Material UI
 
 

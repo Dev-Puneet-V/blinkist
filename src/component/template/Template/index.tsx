@@ -21,13 +21,13 @@ const TemplateComponent = () => {
     const [library, setLibrary] = useState<any>(null);
     useEffect(() => {
         const processor = async () => {
-            let response = await fetch('http://localhost:3004/extra');
+            let response = await fetch('https://jsonkeeper.com/b/27LA/extra');
             let rData = await response.json();
             setData(rData); 
-            response = await fetch('http://localhost:3004/library');
+            response = await fetch('https://jsonkeeper.com/b/27LA/library');
             let rLibrary = await response.json();
             setLibrary(rLibrary);
-            response = await fetch('http://localhost:3004/books');
+            response = await fetch('https://jsonkeeper.com/b/27LA/books');
             let rBooks = await response.json();
             setBooks(rBooks);
         };

@@ -22,10 +22,12 @@
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "react-test-renderer": "^17.0.2",
+    "save-dev": "^0.0.1-security",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
   },
@@ -36,7 +38,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "coverage": "CI=true npm test -- --coverage --collectCoverageFrom=!src/**/*.stories.tsx --collectCoverageFrom=!src/index.tsx  --collectCoverageFrom=!src/App.tsx --collectCoverageFrom=!src/reportWebVitals.ts --testResultsProcessor=jest-sonar-reporter"
+    "coverage": "CI=true npm test -- --coverage --collectCoverageFrom=!src/**/*.stories.tsx --collectCoverageFrom=!src/index.tsx  --collectCoverageFrom=!src/App.tsx --collectCoverageFrom=!src/reportWebVitals.ts --testResultsProcessor=jest-sonar-reporter",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

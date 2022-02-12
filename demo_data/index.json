@@ -1,0 +1,104 @@
+{
+    "book":{
+        "currentlyReading": [
+            {
+                "id": 0,
+                "name": "Being Boss",
+                "url": "assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 60,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 1,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 50,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 3,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 80,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 4,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 90,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 9,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 10,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 7,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 30,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 8,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 20,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 11,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 65,
+                "writerName": "Jim Collins & Bill Lazier"
+            }
+        ],
+        "finishedBook":[
+            {
+                "id": 2,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 100,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 5,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 100,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 6,
+                "name": "Being Boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 100,
+                "writerName": "Jim Collins & Bill Lazier"
+            },
+            {
+                "id": 10,
+                "name": "Being boss",
+                "url": "/assets/book.png",
+                "timeRead": "13-minute read",
+                "progress": 100,
+                "writerName": "Jim Collins & Bill Lazier"
+            }
+        ]
+    }
+}

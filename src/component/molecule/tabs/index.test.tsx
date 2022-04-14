@@ -14,16 +14,16 @@ const tabData = [
 ]
 
 
+const mockCallBack = jest.fn();
+
 test('should render 2 tabw for 2 length data', () => {
-  render(<BrowserRouter><Tabs tabData={tabData}/></BrowserRouter>);
+  render(<BrowserRouter><Tabs stateHandler={mockCallBack} tabData={tabData}/></BrowserRouter>);
   const tabsElement = screen.getAllByTestId(/tab-/);
   expect(tabsElement.length).toBe(2);
 });
 
-const mockCallback = jest.fn();
-
 it("should have green indicator color for currently reading tab by default", ()=>{
-    render(<BrowserRouter><Tabs tabData={tabData} stateHandler={mockCallback }/></BrowserRouter>);
+    render(<BrowserRouter><Tabs tabData={tabData} stateHandler={mockCallBack}/></BrowserRouter>);
     const tabsElement = screen.getByTestId('tab-recent');
     fireEvent.click(tabsElement);
     

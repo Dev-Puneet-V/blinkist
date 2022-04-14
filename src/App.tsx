@@ -13,7 +13,7 @@ const App = () => {
     
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {!isAuthenticated && <Button
+      {isAuthenticated && <Button
                            size='medium' 
                            label="Log in" 
                            variant='contained'
@@ -22,7 +22,7 @@ const App = () => {
                            
                            sx={{position: 'absolute', top: '48vh', left: '48vw'}}/>}
 
-      {isAuthenticated && <Template />}
+      {!isAuthenticated && <Template />}
     </ThemeProvider>
   );
 }

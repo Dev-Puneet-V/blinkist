@@ -33,7 +33,37 @@ const useStyles = makeStyles((themes)=>({
 }));
 
 
-const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, ...props}:any)=>{
+interface BookType{
+    id: number; 
+    name: string;
+    url: string; 
+    timeRead: string; 
+    writerName: string; 
+    synopics: string; 
+    for: string; 
+    about_author: string; 
+    aim: string;
+}
+
+interface LibraryType {
+    currentlyReading: { id: number; progress: number; }[]; 
+    finishedBook: { id: number; }[];
+}
+
+interface DataType{
+    heading: string;
+    books: {id : number}[],
+}
+
+interface Type {
+    books: BookType[],
+    library: LibraryType,
+    data: DataType[],
+    setBooks: Function,
+    setLibrary: Function,
+    setData: Function
+}
+const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, ...props}:Type)=>{
     const classes = useStyles();
     const checkInLibrary = (bookId:any)=>{
         let checker = (curr:any) => {
@@ -55,7 +85,7 @@ const SearchComponent = ({books, setBooks, data, setData, library, setLibrary, .
             });
             setLibrary(library);
             setBookStatus(true);
-            let res = await  fetch("http://localhost:3004/library/", {
+            let res = await fetch("http://localhost:3004/library/", {
               method: "PUT",
               body: JSON.stringify(library),
               headers: {

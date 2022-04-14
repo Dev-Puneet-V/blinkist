@@ -15,7 +15,30 @@ const useStyle = makeStyles({
     }
 });
 
-const MyLibrary = ({books, library}:any) =>{
+interface BookType{
+    id: number; 
+    name: string;
+    url: string; 
+    timeRead: string; 
+    writerName: string; 
+    synopics: string; 
+    for: string; 
+    about_author: string; 
+    aim: string;
+}
+
+interface LibraryType {
+    currentlyReading: { id: number; progress: number; }[]; 
+    finishedBook: { id: number; }[];
+}
+
+interface Type{
+    books: BookType[],
+    library: LibraryType
+}
+
+const MyLibrary = (props: Type) => {
+    const {books, library} = props;
     const classes = useStyle();
     let data = library;
     const tabData = [

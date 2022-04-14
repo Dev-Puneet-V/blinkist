@@ -15,7 +15,17 @@ const useStyles = makeStyles((themes) => ({
   },
 })); 
 
-export default function TabsWrappedLabel({tabData, ...props}: any) {
+interface TabType{
+  value : string,
+  label: string
+}
+
+interface Type{
+  tabData: TabType[];
+  stateHandler : Function;
+}
+
+const TabsWrappedLabel = ({tabData, ...props}: Type) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(tabData && tabData[0].value);
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -35,7 +45,7 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
         data-testid='tabs'
       >
         {
-          tabData.map((currTab:any) => {
+          tabData.map((currTab:TabType) => {
             return (
               <Tab 
                 value={currTab.value} 
@@ -51,3 +61,5 @@ export default function TabsWrappedLabel({tabData, ...props}: any) {
     </Box>
   );
 }
+
+export default TabsWrappedLabel;

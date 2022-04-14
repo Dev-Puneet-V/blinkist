@@ -1,6 +1,13 @@
 import {Box} from '@mui/material';
 import Typography from '../../atom/Typography';
 import Image from '../../atom/Image'
+
+interface Type{
+    height: number;
+    url: string;
+    name: string;
+}
+
 const LogoComponent = ({height=26, url, name, ...props}:any) => {
     return (
         <Box 

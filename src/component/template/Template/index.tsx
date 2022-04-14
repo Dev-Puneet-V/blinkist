@@ -9,6 +9,29 @@ import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import CircularProgress from '@mui/material/CircularProgress';
 import Blank from '../../../component/atom/Blank';
+
+interface BookType{
+    id: number; 
+    name: string;
+    url: string; 
+    timeRead: string; 
+    writerName: string; 
+    synopics: string; 
+    for: string; 
+    about_author: string; 
+    aim: string;
+}
+
+interface LibraryType {
+    currentlyReading: { id: number; progress: number; }[]; 
+    finishedBook: { id: number; }[];
+}
+
+interface DataType{
+    heading: string;
+    books: {id : number}[],
+}
+
 const TemplateComponent = () => {
     const [exploreOption, setExploreOption] = useState<boolean>(false);
     const [blankStatus, setBlankStatus] = useState<boolean>(false);
@@ -16,9 +39,9 @@ const TemplateComponent = () => {
         setExploreOption(!exploreOption);
         setBlankStatus(!exploreOption);
     };
-    const [books, setBooks] = useState<any>(null);
-    const [data, setData] = useState<any>(null);
-    const [library, setLibrary] = useState<any>(null);
+    const [books, setBooks] = useState<BookType[]>();
+    const [data, setData] = useState<DataType[]>();
+    const [library, setLibrary] = useState<LibraryType>();
     useEffect(() => {
         const processor = async () => {
             let response = await fetch('https://blinkist-json.herokuapp.com/extra');
@@ -54,7 +77,7 @@ const TemplateComponent = () => {
                 />
                 <Box sx={{position: 'absolute', top: '93px', width: '100%'}}>
                     <Routes>
-                        <Route path="/library" element={<MyLibrary books={books} setBooks={setBooks} library={library} setLibrary={setLibrary}/>} />
+                        <Route path="/library" element={<MyLibrary books={books} library={library}/>} />
                         <Route path="book-info/:bookId" element={<BookInfo library={library} setLibrary={setLibrary}/>} />
                         <Route path="/" element={ <Home books={books} setBooks={setBooks} data={data} setData={setData} library={library} setLibrary={setLibrary} /> }/>
                         <Route

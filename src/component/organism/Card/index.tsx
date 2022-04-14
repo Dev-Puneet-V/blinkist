@@ -9,6 +9,19 @@ import {Link} from 'react-router-dom';
 import theme from '../../../theme/mainTheme'
 import {useState} from 'react';
 
+interface CardProps {
+    imgHeight: number,
+    url: string,
+    bookName: string,
+    writerName: string,
+    timeRead: string,
+    progress: number | string,
+    width: number,
+    inLibrary: boolean,
+    libraryHandler?: Function,
+    cardId : number | string
+}
+
 const styles={
     parent: {
         borderRadius: theme.spacing(1),
@@ -48,10 +61,10 @@ const styles={
         borderRadius: `0 0 ${theme.spacing(1)} ${theme.spacing(1)}`,
         width: '100%',
     }
-
 }
 
-const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minute read", progress, width, inLibrary, libraryHandler, ...props}: any) => {
+const CardComponent = (prop: CardProps) => {
+    const {imgHeight, url, bookName, writerName, timeRead = "0-minute read", progress, width, inLibrary, libraryHandler, ...props} = prop;
     const [hoverState, setHoverState] = useState(false);
     const [bookLibraryStatus, setBookLibraryStatus] = useState(inLibrary);
     const  hoverStateHandler = ()=>{
@@ -94,7 +107,7 @@ const CardComponent = ({imgHeight, url, bookName, writerName, timeRead = "0-minu
                     <ProgressBar width={100} value={progress} color='primary' data-testid='progress'/> 
                     :
                     <Box onClick={e => 
-                        libraryHandler(props.cardId, setBookLibraryStatus)
+                        libraryHandler && libraryHandler(props.cardId, setBookLibraryStatus)
                     } 
                     data-testid='card-library-handler'
                     sx={{

@@ -23,10 +23,9 @@ const tabData = [
       }
 ]
 
+
 Template.args = {
-    textColor: 'primary',
-    indicatorColor: 'primary',
-    // stateHandler: {handleState},
+    // stateHandler: {},
     tabData: tabData
 }
 

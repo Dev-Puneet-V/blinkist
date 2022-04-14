@@ -28,7 +28,14 @@ const useStyles = makeStyles((themes)=>({
     },
 }));
 
-const BannerComponent = ({heading, discription, img}:any) =>{
+interface Type{
+    heading?: string;
+    discription?: string;
+    img?: string;
+}
+
+const BannerComponent = (props:Type) =>{
+    const {heading, discription, img} = props;
     const classes = useStyles();
     return (
         <Box className={classes.parent} >

@@ -9,7 +9,28 @@ import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import SearchBox from '../../molecule/Search';
 import { useAuth0 } from "@auth0/auth0-react";
-const HeaderComponent = (props : any) => {
+interface BookType{
+    id: number; 
+    name: string;
+    url: string; 
+    timeRead: string; 
+    writerName: string; 
+    synopics: string; 
+    for: string; 
+    about_author: string; 
+    aim: string;
+}
+interface Type{
+    url: string,
+    name: string,
+    handleExploreMenu: Function,
+    exploreOption:  boolean,
+    books: BookType[],
+    blankStatus: boolean,
+    setBlankStatus: Function
+}
+
+const HeaderComponent = (props : Type) => {
     const { logout } = useAuth0();
     const settings = ['Logout'];
     const [anchorElUser, setAnchorElUser] = useState(null);

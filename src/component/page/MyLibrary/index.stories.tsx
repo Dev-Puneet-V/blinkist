@@ -250,11 +250,7 @@ export const Template: ComponentStory<typeof Library>  = (args:any) => {
 }
 Template.args = {
     "books": books,
-    "setBooks": setBooks,
-    "data": data,
-    "setData": setData,
-    "library": library,
-    "setLibrary": setLibrary
+    "library": library
 }
 
 

@@ -60,7 +60,7 @@ export const Template: ComponentStory<typeof BookInfo>  = (args:any) => {
 Template.args = {
     "library": library,
     "setLibrary": ()=> {},
-    "id": 5
+    "id": "5"
 }
 
 

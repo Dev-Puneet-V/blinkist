@@ -40,7 +40,7 @@
     "build-storybook": "build-storybook -s public",
     "coverage": "CI=true npm test -- --coverage --collectCoverageFrom=!src/**/*.stories.tsx --collectCoverageFrom=!src/index.tsx  --collectCoverageFrom=!src/App.tsx --collectCoverageFrom=!src/reportWebVitals.ts --testResultsProcessor=jest-sonar-reporter",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

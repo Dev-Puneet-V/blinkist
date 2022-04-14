@@ -78,10 +78,41 @@ const useStyles = makeStyles((themes) => ({
     },
 }));
 
-const BookInfoComponent = ({library, setLibrary, id}:any)=>{
+interface LibraryType {
+    currentlyReading: { id: number; progress: number; }[]; 
+    finishedBook: { id: number; }[];
+}
+
+
+interface BookType{
+    id: number; 
+    name: string;
+    url: string; 
+    timeRead: string; 
+    writerName: string; 
+    synopics: string; 
+    for: string; 
+    about_author: string; 
+    aim: string;
+}
+
+interface CurrType{
+    id: number;
+    progress: number;
+}
+
+interface Type{
+    library: LibraryType,
+    setLibrary: Function,
+    id?: string
+}
+interface BookIdType{
+    bookId?: string
+}
+const BookInfoComponent = ({library, setLibrary, id}:Type)=>{
     const classes = useStyle();
     const allClass = useStyles();
-    let { bookId } = useParams();
+    let { bookId }:BookIdType = useParams();
     const tabData = [
         { 
           'value': 'synopsis',
@@ -100,14 +131,14 @@ const BookInfoComponent = ({library, setLibrary, id}:any)=>{
         bookId = id;
     }
     const [currState, setCurrState] = useState(tabData[0].value);
-    const [bookData, setBookData] = useState<any>(null);
+    const [bookData, setBookData] = useState<BookType>();
     const [currentlyReadingStatus, setcurrentlyReadingStatus] = useState<boolean>(true);
     const handleState = (state:any) => {
         setCurrState(state);
     }
     const checkInLibrary = ()=>{
         for(let curr of library.currentlyReading){
-            if(curr.id == bookId){
+            if(curr.id as BookIdType== bookId){
                 setcurrentlyReadingStatus(true)
                 return;
             }
@@ -144,22 +175,22 @@ const BookInfoComponent = ({library, setLibrary, id}:any)=>{
         }
     }
     const moreInfo = ()=>{
-        if(currState === tabData[0].value){
+      if(currState === tabData[0].value){
             return(
                 <Typography>
-                    {bookData.synopics}
+                    {bookData && bookData.synopics}
                 </Typography>
             )
         }else if(currState === tabData[1].value){
             return(
                 <Typography>
-                    {bookData.for}  
+                    {bookData && bookData.for}  
                 </Typography>
             )
         }else if(currState === tabData[2].value){
             return(
                 <Typography>
-                    {bookData.about_author}       
+                    {bookData && bookData.about_author}       
                 </Typography>
             )
         }

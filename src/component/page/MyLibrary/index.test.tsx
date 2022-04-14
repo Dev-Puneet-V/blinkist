@@ -14,11 +14,11 @@ const router = (books:any, library: any)=>{
 describe('Library', () => {
     let response, data, library: any, books: any;
     beforeAll(async ()=> {
-        response = await fetch('http://localhost:3004/extra');
+        response = await fetch('https://blinkist-json.herokuapp.com/extra');
         data = await response.json();
-        response = await fetch('http://localhost:3004/library');
+        response = await fetch('https://blinkist-json.herokuapp.com/library');
         library = await response.json();
-        response = await fetch('http://localhost:3004/books');
+        response = await fetch('https://blinkist-json.herokuapp.com/books');
         books = await response.json();
     })
     test('renders cicular progress bar if books are not available', async () => {

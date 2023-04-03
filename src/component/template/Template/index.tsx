@@ -44,13 +44,13 @@ const TemplateComponent = () => {
     const [library, setLibrary] = useState<LibraryType>();
     useEffect(() => {
         const processor = async () => {
-            let response = await fetch('https://blinkist-json.herokuapp.com/extra');
+            let response = await fetch('https://zany-red-crayfish-kit.cyclic.app/extra');
             let rData = await response.json();
             setData(rData); 
-            response = await fetch('https://blinkist-json.herokuapp.com/library');
+            response = await fetch('https://zany-red-crayfish-kit.cyclic.app/library');
             let rLibrary = await response.json();
             setLibrary(rLibrary);
-            response = await fetch('https://blinkist-json.herokuapp.com/books');
+            response = await fetch('https://zany-red-crayfish-kit.cyclic.app/books');
             let rBooks = await response.json();
             setBooks(rBooks);
         };

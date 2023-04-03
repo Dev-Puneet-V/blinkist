@@ -14,11 +14,11 @@ const router = (books:any, library: any)=>{
 describe('Library', () => {
     let response, data, library: any, books: any;
     beforeAll(async ()=> {
-        response = await fetch('https://blinkist-json.herokuapp.com/extra');
+        response = await fetch('https://zany-red-crayfish-kit.cyclic.app/extra');
         data = await response.json();
-        response = await fetch('https://blinkist-json.herokuapp.com/library');
+        response = await fetch('https://zany-red-crayfish-kit.cyclic.app/library');
         library = await response.json();
-        response = await fetch('https://blinkist-json.herokuapp.com/books');
+        response = await fetch('https://zany-red-crayfish-kit.cyclic.app/books');
         books = await response.json();
     })
     test('renders cicular progress bar if books are not available', async () => {

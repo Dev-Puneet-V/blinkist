@@ -19,7 +19,7 @@ const router = (library: any)=>{
 describe('Book Info', () => {
     let response, library: any;
     beforeAll(async ()=> {
-        response = await fetch('https://blinkist-json.herokuapp.com/library');
+        response = await fetch('https://zany-red-crayfish-kit.cyclic.app/library');
         library = await response.json();
     });
     test('should render circular bar if data is empty', () => {

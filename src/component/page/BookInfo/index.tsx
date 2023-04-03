@@ -147,7 +147,7 @@ const BookInfoComponent = ({library, setLibrary, id}:Type)=>{
     }
     useEffect(() =>{
         const processor = async (id: any) => {
-            let response = await fetch(`https://blinkist-json.herokuapp.com/books/${bookId}`);
+            let response = await fetch(`https://zany-red-crayfish-kit.cyclic.app/books/${bookId}`);
             const book_data = await response.json();
             setBookData(book_data);
         }
@@ -161,7 +161,7 @@ const BookInfoComponent = ({library, setLibrary, id}:Type)=>{
             library.currentlyReading.splice(index, 1);
             library.finishedBook.push({"id" : currData.id});
             setLibrary(library);
-            let res = await  fetch("https://blinkist-json.herokuapp.com/library/", {
+            let res = await  fetch("https://zany-red-crayfish-kit.cyclic.app/library/", {
                 method: "PUT",
                 body: JSON.stringify(library),
                 headers: {

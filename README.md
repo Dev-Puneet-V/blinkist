@@ -11,7 +11,6 @@ This is a clone of [https://www.blinkist.com/](https://www.blinkist.com/en/nc/li
 * Typescript
 * Storybook
 * React Testing library
-* Sonar Cloud - test coverage > 85%
 * Auth0
 * Material UI
 
@@ -21,7 +20,7 @@ This is a clone of [https://www.blinkist.com/](https://www.blinkist.com/en/nc/li
 ***
 * [Website Link](https://blinkist-clone.herokuapp.com/)
 * [SonarCloud Coverage report](https://sonarcloud.io/component_measures?id=Puneet-iner_blinkist&metric=coverage&view=list)
-* [Json Server](https://blinkist-json.herokuapp.com/)
+* [Json Server](https://zany-red-crayfish-kit.cyclic.app/)
 
 
 
